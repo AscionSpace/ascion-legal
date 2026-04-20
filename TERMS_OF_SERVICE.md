@@ -1,0 +1,218 @@
+---
+version: 2026-04-20-draft-1
+status: DRAFT — not reviewed by counsel
+effective: (pending)
+---
+
+# Terms of Service
+
+> **DRAFT NOTICE.** This document is a developer-written draft and has not
+> been reviewed by a qualified lawyer. It is placed in the repository to
+> support engineering scaffolding (the `auth.acceptTerms` endpoint and
+> client-side consent flow). It must be reviewed and revised by counsel
+> before any public release, including TestFlight distribution wider than
+> closed friends-and-family.
+
+## 1. Who these terms are between
+
+These Terms of Service ("**Terms**") govern your use of the **Ascion**
+mobile application and related online services (together, the
+"**Service**"), provided by the operator of the Service ("**we**", "**us**",
+"**our**"). By creating an account, signing in, or otherwise using the
+Service, you ("**you**", "**user**", "**player**") agree to these Terms.
+If you do not agree, do not use the Service.
+
+## 2. Eligibility
+
+You must be **at least 16 years old** to use the Service. This minimum age
+applies worldwide, including the European Economic Area, the United
+Kingdom, Switzerland, and every other region where the Service is offered.
+We do not operate a parental-consent flow and do not offer the Service to
+users under 16.
+
+You confirm your age by providing your date of birth during onboarding.
+Providing false information about your age is a breach of these Terms
+and may result in termination of your account.
+
+## 3. Accounts
+
+- You create your account by signing in with your Apple ID using Sign in
+  with Apple. This is the supported sign-in method for the Service.
+- You are responsible for the security of the Apple ID and the device
+  used to access the Service.
+- You may hold only one active account. Operating multiple accounts to
+  gain an unfair advantage, evade bans, or abuse promotional mechanics
+  is not permitted.
+- You must provide a username. Usernames that are offensive, impersonate
+  another person, or violate third-party rights may be reclaimed.
+
+## 4. License to use the Service
+
+Subject to your compliance with these Terms, we grant you a limited,
+personal, non-exclusive, non-transferable, non-sublicensable, revocable
+license to install and use the Service for your own non-commercial
+entertainment.
+
+## 5. Virtual items, credits, and in-app purchases
+
+- **Virtual items** (including in-game credits, items, ships, agents,
+  cosmetic content, subscription benefits, and any other virtual
+  content — together, "**Virtual Items**") are **licensed to you, not
+  sold**. You do **not** own Virtual Items. You have no real-world
+  monetary claim against us for Virtual Items, and Virtual Items cannot
+  be redeemed for cash or any legally recognised form of property.
+- Virtual Items have **no monetary value outside the Service** and are
+  not intended to function as currency, investment, security, or
+  financial instrument of any kind. No statement made by us, any
+  employee, or any third party should be interpreted as a representation
+  that Virtual Items constitute or will constitute a financial product.
+- In-app purchases are processed exclusively by **Apple** through the
+  App Store. All payments, refunds, billing disputes, and tax
+  collection are governed by Apple's terms in addition to these Terms.
+- **Ascion Prime** is an auto-renewing subscription. Billing, renewal,
+  and cancellation are managed through your Apple account settings.
+  Subscription benefits are provided only while the subscription is
+  active and for the period for which Apple has successfully charged
+  you.
+- We may, at our discretion and without compensation, modify, rebalance,
+  remove, reset, or discontinue Virtual Items and gameplay features at
+  any time, including in ways that affect the perceived value of
+  Virtual Items you have previously acquired. Because Virtual Items
+  are licensed rather than owned, no refund is owed for such changes,
+  except where applicable consumer-protection law requires otherwise.
+
+## 6. User conduct
+
+You agree not to:
+
+- Use the Service to harass, threaten, defraud, or harm other users;
+- Attempt to gain unauthorised access to accounts, servers, or systems
+  related to the Service, including by reverse-engineering, decompiling,
+  or circumventing technical protections except as permitted by
+  mandatory law;
+- Use bots, automation, scripts, or unofficial clients to interact with
+  the Service in ways that give you an advantage or disrupt other users;
+- Exploit bugs, glitches, or unintended mechanics for material gain;
+- Buy, sell, trade, or transfer accounts, characters, Virtual Items, or
+  access credentials outside the Service;
+- Use the Service in violation of sanctions, export-control, or other
+  applicable law;
+- Infringe any third party's intellectual property, privacy, or
+  publicity rights.
+
+We may, in our discretion, suspend or terminate accounts that violate
+these rules. Severe or repeat violations may result in forfeiture of
+accumulated Virtual Items without compensation.
+
+## 7. Service is provided "as is"
+
+To the fullest extent permitted by applicable law, the Service is provided
+"**as is**" and "**as available**", with all faults and without warranties
+of any kind, whether express, implied, statutory, or otherwise. We do not
+warrant that the Service will be uninterrupted, error-free, secure against
+every attack, or that any defect will be corrected.
+
+Nothing in these Terms excludes or limits liability that cannot be
+excluded or limited under mandatory consumer-protection law in your place
+of habitual residence.
+
+## 8. Limitation of liability
+
+To the fullest extent permitted by applicable law, and except for
+liability that cannot be excluded under mandatory law, our total
+aggregate liability to you for all claims arising out of or relating to
+the Service or these Terms is limited to the greater of (a) the amount
+you paid us for in-app purchases in the twelve (12) months preceding
+the event giving rise to the claim, or (b) EUR 50.
+
+We are not liable for indirect, incidental, special, consequential,
+exemplary, or punitive damages, for loss of profits, data, goodwill,
+or Virtual Items, even if advised of the possibility of such damages.
+
+Nothing here limits rights you have as a consumer under mandatory law.
+
+## 9. Termination
+
+You may stop using the Service at any time. You may request deletion of
+your account through the in-app support channel or by contacting us at
+the address in Section 14.
+
+We may suspend or terminate your access to the Service, in whole or in
+part, at any time, with or without notice, for any violation of these
+Terms, for suspected fraudulent or illegal activity, to comply with
+legal obligations, or to protect the Service or its users.
+
+On termination, your license to use the Service ends, your access to
+Virtual Items ends, and — except where mandatory law requires otherwise —
+no refund is due.
+
+## 10. Changes to the Service and these Terms
+
+We may update the Service at any time.
+
+We may update these Terms at any time. If a change is material — meaning
+it reasonably affects your rights or obligations — we will notify you
+in-app by re-prompting you to accept the new version, and by bumping
+the **version string** at the top of this document. Your continued use
+of the Service after the effective date of the updated Terms constitutes
+acceptance. If you do not accept, you must stop using the Service and
+may request account deletion.
+
+Each accepted version is recorded server-side against your account.
+
+## 11. Intellectual property
+
+The Service, including all software, text, graphics, audio, game
+mechanics, fictional settings, characters, and trademarks, is owned by
+us or our licensors and is protected by applicable intellectual-property
+law. Nothing in these Terms transfers ownership of any of this to you.
+
+You retain ownership of any content you lawfully submit. By submitting
+content, you grant us a worldwide, royalty-free, non-exclusive licence
+to host, store, reproduce, and display it as necessary to operate the
+Service.
+
+## 12. Third-party services
+
+The Service integrates with third-party services (notably **Apple** for
+authentication and payments, and a push-notification provider for
+transactional notifications). Your use of those services is subject to
+their respective terms. We are not responsible for third-party services.
+
+## 13. Governing law and dispute resolution
+
+These Terms are governed by the laws of the **Czech Republic**, without
+regard to conflict-of-law rules, and subject to mandatory
+consumer-protection law of your place of habitual residence, which
+continues to apply to the extent it grants you stronger rights.
+
+Before bringing a formal dispute, you agree to contact us in writing
+and attempt in good faith to resolve the matter for at least thirty
+(30) days. If unresolved, the **courts of the Czech Republic** have
+exclusive jurisdiction, subject again to any mandatory consumer
+jurisdiction right you have under the law of your place of habitual
+residence.
+
+If you are a consumer in the European Union, you may also use the
+European Commission's Online Dispute Resolution platform at
+`https://ec.europa.eu/consumers/odr`.
+
+## 14. Contact
+
+Questions about these Terms can be sent to the contact address
+published in the Service's in-app support section. The published DPO
+and support email will be updated before public release.
+
+## 15. Severability and interpretation
+
+If any provision of these Terms is held unenforceable, the remaining
+provisions remain in effect. Headings are for convenience only and do
+not affect interpretation.
+
+## 16. Version
+
+- **Version:** `2026-04-20-draft-1`
+- **Status:** DRAFT — not reviewed by counsel.
+- **Acceptance tracking:** The server records the accepted version string
+  on your account. When this version string changes, you will be asked
+  to review and accept the updated Terms on next launch.

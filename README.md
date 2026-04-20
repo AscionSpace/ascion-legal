@@ -33,8 +33,8 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-04-20-draft-2`  | DRAFT  | Not reviewed by counsel. Template-based. Names 1101 Capital s.r.o. as operator. |
-| `PRIVACY_POLICY.md`     | `2026-04-20-draft-2`  | DRAFT  | Not reviewed by counsel. GDPR-shaped. Names controller + contact.               |
+| `TERMS_OF_SERVICE.md`   | `2026-04-20-draft-3`  | DRAFT  | Not reviewed by counsel. Apple + Google Sign-In. Named operator = 1101 Capital s.r.o. |
+| `PRIVACY_POLICY.md`     | `2026-04-20-draft-3`  | DRAFT  | Not reviewed by counsel. Apple + Google sign-in sources. Age checkbox, no DOB stored. |
 
 ## Constraints these drafts are written under
 

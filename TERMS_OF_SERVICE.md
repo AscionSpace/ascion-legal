@@ -1,5 +1,5 @@
 ---
-version: 2026-04-20-draft-2
+version: 2026-04-20-draft-3
 status: DRAFT — not reviewed by counsel
 effective: (pending)
 ---
@@ -39,10 +39,12 @@ and may result in termination of your account.
 
 ## 3. Accounts
 
-- You create your account by signing in with your Apple ID using Sign in
-  with Apple. This is the supported sign-in method for the Service.
-- You are responsible for the security of the Apple ID and the device
-  used to access the Service.
+- You create your account by signing in with your **Apple ID** (Sign in
+  with Apple) or your **Google account** (Sign in with Google) on a
+  supported device. These are the supported sign-in methods for the
+  Service.
+- You are responsible for the security of the Apple ID or Google account
+  used to sign in and for the device used to access the Service.
 - You may hold only one active account. Operating multiple accounts to
   gain an unfair advantage, evade bans, or abuse promotional mechanics
   is not permitted.
@@ -215,7 +217,7 @@ not affect interpretation.
 
 ## 16. Version
 
-- **Version:** `2026-04-20-draft-2`
+- **Version:** `2026-04-20-draft-3`
 - **Status:** DRAFT — not reviewed by counsel.
 - **Acceptance tracking:** The server records the accepted version string
   on your account. When this version string changes, you will be asked

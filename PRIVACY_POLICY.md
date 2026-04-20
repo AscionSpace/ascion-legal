@@ -1,5 +1,5 @@
 ---
-version: 2026-04-20-draft-2
+version: 2026-04-20-draft-3
 status: DRAFT — not reviewed by counsel
 effective: (pending)
 ---
@@ -40,15 +40,21 @@ We collect only what is needed to operate and secure the Service.
 
 ### 2.1. You provide directly
 
-- **Apple ID** information you choose to share through **Sign in with
-  Apple** — typically a stable Apple-issued user identifier and,
-  optionally, the email address and name you choose to share.
-  If you use Apple's "Hide My Email" feature, we receive a relay email
-  address, not your primary address.
+- **Sign-in provider identifiers.** When you sign in with **Apple** we
+  receive a stable Apple-issued user identifier and, optionally, the
+  email address and name you choose to share; if you use Apple's "Hide
+  My Email" feature we receive a relay email address, not your primary
+  address. When you sign in with **Google** we receive a stable
+  Google-issued user identifier and the email address associated with
+  that Google account, plus the name and profile-picture URL where
+  Google exposes them. We receive only the fields the respective
+  sign-in provider sends; we do not scrape additional data from your
+  Apple ID or Google account.
 - **Username** you choose.
-- **Date of birth** you provide for age verification. We store it to
-  enforce the minimum-age rule (see Section 6). We do not use it for
-  personalised advertising.
+- **Age confirmation.** On first launch you confirm via a single
+  checkbox that you meet the minimum-age rule (see Section 6). We
+  record only the timestamp of that confirmation — we do **not**
+  collect or store your date of birth.
 
 ### 2.2. Automatically, as you use the Service
 
@@ -239,7 +245,7 @@ We apply industry-standard technical and organisational measures to
 protect personal data, including encryption in transit, access controls
 on backend systems, secret management, and security monitoring. No
 system is ever perfectly secure. We recommend you protect the Apple ID
-used to sign in and the device you sign in from.
+or Google account used to sign in and the device you sign in from.
 
 If we become aware of a personal-data breach that is likely to result
 in a risk to your rights and freedoms, we will notify the competent
@@ -265,7 +271,7 @@ version is recorded server-side against your account.
 
 ## 14. Version
 
-- **Version:** `2026-04-20-draft-2`
+- **Version:** `2026-04-20-draft-3`
 - **Status:** DRAFT — not reviewed by counsel.
 - **Acceptance tracking:** The server records the accepted version
   string on your account. When this version string changes, you will

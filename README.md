@@ -33,8 +33,8 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-04-20-draft-1`  | DRAFT  | Not reviewed by counsel. Template-based.             |
-| `PRIVACY_POLICY.md`     | `2026-04-20-draft-1`  | DRAFT  | Not reviewed by counsel. GDPR-shaped, needs review.  |
+| `TERMS_OF_SERVICE.md`   | `2026-04-20-draft-2`  | DRAFT  | Not reviewed by counsel. Template-based. Names 1101 Capital s.r.o. as operator. |
+| `PRIVACY_POLICY.md`     | `2026-04-20-draft-2`  | DRAFT  | Not reviewed by counsel. GDPR-shaped. Names controller + contact.               |
 
 ## Constraints these drafts are written under
 

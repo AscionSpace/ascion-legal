@@ -1,5 +1,5 @@
 ---
-version: 2026-04-20-draft-1
+version: 2026-04-20-draft-2
 status: DRAFT — not reviewed by counsel
 effective: (pending)
 ---
@@ -17,10 +17,13 @@ effective: (pending)
 
 These Terms of Service ("**Terms**") govern your use of the **Ascion**
 mobile application and related online services (together, the
-"**Service**"), provided by the operator of the Service ("**we**", "**us**",
-"**our**"). By creating an account, signing in, or otherwise using the
-Service, you ("**you**", "**user**", "**player**") agree to these Terms.
-If you do not agree, do not use the Service.
+"**Service**"), provided by **1101 Capital s.r.o.**, a Czech limited
+liability company with registered office at Lidická 700/19, Veveří,
+602 00 Brno, Czech Republic (IČO: 07180969; Data Box ID: `zi6aisw`)
+("**we**", "**us**", "**our**"). By creating an account, signing in,
+or otherwise using the Service, you ("**you**", "**user**",
+"**player**") agree to these Terms. If you do not agree, do not use
+the Service.
 
 ## 2. Eligibility
 
@@ -199,9 +202,10 @@ European Commission's Online Dispute Resolution platform at
 
 ## 14. Contact
 
-Questions about these Terms can be sent to the contact address
-published in the Service's in-app support section. The published DPO
-and support email will be updated before public release.
+Questions about these Terms can be sent to **team@ascion.space**, or by
+post to 1101 Capital s.r.o., Lidická 700/19, Veveří, 602 00 Brno,
+Czech Republic. Czech administrative communications may also be sent to
+our Data Box (ID `zi6aisw`).
 
 ## 15. Severability and interpretation
 
@@ -211,7 +215,7 @@ not affect interpretation.
 
 ## 16. Version
 
-- **Version:** `2026-04-20-draft-1`
+- **Version:** `2026-04-20-draft-2`
 - **Status:** DRAFT — not reviewed by counsel.
 - **Acceptance tracking:** The server records the accepted version string
   on your account. When this version string changes, you will be asked

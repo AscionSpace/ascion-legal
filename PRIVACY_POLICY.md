@@ -1,5 +1,5 @@
 ---
-version: 2026-04-20-draft-1
+version: 2026-04-20-draft-2
 status: DRAFT — not reviewed by counsel
 effective: (pending)
 ---
@@ -22,13 +22,17 @@ supplemented by local law.
 ## 1. Who we are (the controller)
 
 The **controller** of your personal data for the purposes of applicable
-data-protection law is the operator of the Service. A full legal entity
-identification and contact details will be provided here before public
-release.
+data-protection law is **1101 Capital s.r.o.**, a Czech limited
+liability company with registered office at Lidická 700/19, Veveří,
+602 00 Brno, Czech Republic (IČO: 07180969; Data Box ID: `zi6aisw`).
 
-A **Data Protection Officer (DPO) / privacy contact** can be reached at
-the address published in-app and on the public site. This placeholder
-block will be replaced with a real contact before public release.
+**Privacy contact:** For any privacy or data-protection matter —
+including questions about this Policy and requests to exercise your
+rights described in §7 — email **team@ascion.space**. We have not
+formally appointed a Data Protection Officer at this stage; the
+address above is the single privacy contact. If our processing grows
+to a scale that requires a DPO under Article 37 GDPR, we will appoint
+one and update this Policy accordingly.
 
 ## 2. What personal data we collect
 
@@ -245,9 +249,12 @@ timeframes required by law.
 ## 12. Contact
 
 To exercise your rights, ask questions about this Policy, or contact
-our privacy / DPO function, use the support email published in-app and
-on the public site. This placeholder will be replaced with a real
-contact before public release.
+us about any data-protection matter, email **team@ascion.space**.
+Postal mail may be sent to 1101 Capital s.r.o., Lidická 700/19,
+Veveří, 602 00 Brno, Czech Republic. Czech administrative
+communications may also be sent to our Data Box (ID `zi6aisw`). No
+formal DPO is appointed at this stage; the contacts above are the
+single privacy contact.
 
 ## 13. Changes to this Policy
 
@@ -258,7 +265,7 @@ version is recorded server-side against your account.
 
 ## 14. Version
 
-- **Version:** `2026-04-20-draft-1`
+- **Version:** `2026-04-20-draft-2`
 - **Status:** DRAFT — not reviewed by counsel.
 - **Acceptance tracking:** The server records the accepted version
   string on your account. When this version string changes, you will

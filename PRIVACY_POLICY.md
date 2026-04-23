@@ -1,5 +1,5 @@
 ---
-version: 2026-04-23-draft-4
+version: 2026-04-23-draft-5
 status: DRAFT — not reviewed by counsel
 effective: (pending)
 ---
@@ -72,10 +72,10 @@ We collect only what is needed to operate and secure the Service.
   screen transitions, sent to our product-analytics processor in
   pseudonymous form to help us understand how the Service is used and
   improve it. See §7 for the named processors.
-- **Coarse location** — country and region inferred from your IP
-  address by our analytics processors, used to report the geographic
-  distribution of active users in aggregate. We do **not** collect
-  precise (GPS-level) location.
+- **Coarse location** — country, region, and city inferred from your
+  IP address by our analytics processors, used to report the
+  geographic distribution of active users in aggregate. We do **not**
+  collect precise (GPS-level) location.
 - **Crash and performance telemetry** where you have not opted out.
   Personally identifying context is scrubbed at the source where
   possible.
@@ -174,10 +174,10 @@ only to the extent necessary for the purposes above:
 - **Apple Inc.** — authentication (Sign in with Apple), payment
   processing (App Store IAP), app distribution (App Store / TestFlight).
 - **Google LLC** — (a) **Firebase Cloud Messaging**, used to deliver
-  transactional push notifications; (b) **Firebase Analytics**, used for
-  country-level usage analytics and active-user reporting, configured
-  with advertising-personalization signals disabled and granular
-  location data collection restricted to country level.
+  transactional push notifications; (b) **Firebase Analytics**, used
+  for usage analytics and active-user reporting at country, region,
+  and city granularity, configured with advertising-personalization
+  signals disabled.
 - **Mixpanel, Inc.** — product analytics (events, funnels, retention).
   Processing is performed on Mixpanel's EU infrastructure
   (`api-eu.mixpanel.com`). We identify users to Mixpanel by the
@@ -293,7 +293,7 @@ version is recorded server-side against your account.
 
 ## 14. Version
 
-- **Version:** `2026-04-23-draft-4`
+- **Version:** `2026-04-23-draft-5`
 - **Status:** DRAFT — not reviewed by counsel.
 - **Acceptance tracking:** The server records the accepted version
   string on your account. When this version string changes, you will

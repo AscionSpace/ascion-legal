@@ -1,5 +1,5 @@
 ---
-version: 2026-04-20-draft-3
+version: 2026-04-23-draft-4
 status: DRAFT — not reviewed by counsel
 effective: (pending)
 ---
@@ -67,6 +67,15 @@ We collect only what is needed to operate and secure the Service.
   you take, for operational, anti-fraud, anti-abuse, and debugging
   purposes. Logs may contain IP address, user-agent, and request
   metadata.
+- **Event analytics** — the in-game actions you take (e.g., starting a
+  mission, completing a craft, an in-app purchase), session events, and
+  screen transitions, sent to our product-analytics processor in
+  pseudonymous form to help us understand how the Service is used and
+  improve it. See §7 for the named processors.
+- **Coarse location** — country and region inferred from your IP
+  address by our analytics processors, used to report the geographic
+  distribution of active users in aggregate. We do **not** collect
+  precise (GPS-level) location.
 - **Crash and performance telemetry** where you have not opted out.
   Personally identifying context is scrubbed at the source where
   possible.
@@ -105,8 +114,11 @@ We do not collect:
 - Precise geolocation.
 - Contacts, calendar, photos, microphone, or camera content.
 - Biometric data.
-- Advertising identifiers for ad tracking (the Service does not serve
-  third-party advertising).
+- Advertising identifiers (IDFA on iOS, AAID on Android). The Service
+  does not serve advertisements and does not integrate with advertising
+  networks; we explicitly disable advertising-personalization signals
+  in our analytics processors and do not request App Tracking
+  Transparency permission on iOS.
 - Payment-card data.
 
 ## 4. Legal bases for processing (GDPR Art. 6)
@@ -120,6 +132,7 @@ We process your personal data under the following legal bases:
 | Fraud prevention, anti-abuse, server-log retention, security investigations | Legitimate interest (Art. 6(1)(f))       |
 | Sending transactional push notifications                                  | Performance of a contract (Art. 6(1)(b)) with consent for device-level notification permission (given via OS prompt) |
 | Crash and performance telemetry                                           | Legitimate interest (Art. 6(1)(f)); you may opt out |
+| Product analytics (feature use, session patterns, aggregate geographic distribution of active users) | Legitimate interest (Art. 6(1)(f)); subject to your right to object under Art. 21 GDPR |
 | Responding to legal claims and requests from authorities                  | Legal obligation (Art. 6(1)(c))          |
 
 We do **not** rely on consent as the legal basis for core service
@@ -160,21 +173,30 @@ only to the extent necessary for the purposes above:
 
 - **Apple Inc.** — authentication (Sign in with Apple), payment
   processing (App Store IAP), app distribution (App Store / TestFlight).
+- **Google LLC** — (a) **Firebase Cloud Messaging**, used to deliver
+  transactional push notifications; (b) **Firebase Analytics**, used for
+  country-level usage analytics and active-user reporting, configured
+  with advertising-personalization signals disabled and granular
+  location data collection restricted to country level.
+- **Mixpanel, Inc.** — product analytics (events, funnels, retention).
+  Processing is performed on Mixpanel's EU infrastructure
+  (`api-eu.mixpanel.com`). We identify users to Mixpanel by the
+  pseudonymous internal account identifier only; no email, real name,
+  payment data, or precise location is sent to Mixpanel.
+- **Functional Software, Inc.** (operating as **Sentry**) — crash and
+  performance telemetry. Sentry is configured with personally
+  identifying context scrubbed at the source (default PII disabled and
+  a purpose-built redaction filter applied).
 - **Cloud infrastructure providers** that host the Service (server
-  hosting, managed database, object storage). They process data on our
-  instructions as data processors under written contracts.
-- **Push-notification service provider** used to deliver transactional
-  notifications.
-- **Crash and performance telemetry provider** (if any), with PII
-  scrubbing configured.
+  hosting, managed database, object storage, content delivery). They
+  process data on our instructions as data processors under written
+  contracts. A current list is maintained internally and will be
+  published before public release.
 - **Professional advisors** (legal, accounting, compliance) where
   necessary.
 - **Authorities, courts, or other parties** where we are legally
   required to share data or where we have a legitimate interest in
   protecting the Service, its users, or others from fraud or harm.
-
-A current list of sub-processors will be published and kept up to date
-in the Service before public release.
 
 We do **not** sell personal data, and we do **not** share data with
 advertising networks.
@@ -271,7 +293,7 @@ version is recorded server-side against your account.
 
 ## 14. Version
 
-- **Version:** `2026-04-20-draft-3`
+- **Version:** `2026-04-23-draft-4`
 - **Status:** DRAFT — not reviewed by counsel.
 - **Acceptance tracking:** The server records the accepted version
   string on your account. When this version string changes, you will

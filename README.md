@@ -1,20 +1,20 @@
-# Ascion legal — DRAFT copy pending counsel review
+# Ascion legal — release-tracked user-facing copy
 
 This repository is the **single source of truth** for Ascion's user-facing
 legal copy (Terms of Service, Privacy Policy). Both the backend
 (`ascion-server`) and the marketing site (`ascion-website`) consume it as a
 git submodule pinned to a tag — never edit these files inside those repos.
 
-These documents have been written by the developer from industry templates
-and **have not been reviewed by counsel**. Do **not** ship to production /
-App Store review / TestFlight distribution wider than closed
-friends-and-family until a qualified lawyer (preferably Czech-jurisdiction,
-versed in EU consumer protection, GDPR, and virtual-goods law) has reviewed
-and signed off on each document.
+These documents are the current **release-tracked** user-facing legal
+copy for Ascion. They have been finalised internally from industry
+templates and are intended for public TestFlight and production use.
+External counsel review remains strongly recommended, especially for
+EU consumer protection, GDPR, virtual-goods law, and any future Web3
+or portability disclosures.
 
 Every user-facing document is versioned with a `version` field at the top
-(e.g., `version: 2026-04-20-draft-1`) and each publish cuts a matching git
-tag (e.g., `v2026-04-20-draft-1`). The server's `auth.acceptTerms` endpoint
+(e.g., `version: 2026-04-23-release-1`) and each publish cuts a matching git
+tag (e.g., `v2026-04-23-release-1`). The server's `auth.acceptTerms` endpoint
 records the accepted version string on the `Account`. Any material change
 to a document means a new version string, a new tag, and re-prompting the
 user for acceptance on next launch.
@@ -33,45 +33,51 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-04-20-draft-3`  | DRAFT  | Not reviewed by counsel. Apple + Google Sign-In. Named operator = 1101 Capital s.r.o. |
-| `PRIVACY_POLICY.md`     | `2026-04-23-draft-5`  | DRAFT  | Not reviewed by counsel. Named sub-processors (Google/Firebase, Mixpanel, Sentry). Event analytics + coarse-location (country/region/city) disclosed. Advertising-personalization signals disabled. |
+| `TERMS_OF_SERVICE.md`   | `2026-04-23-release-1`  | ACTIVE  | Apple + Google Sign-In. Platform billing/distribution wording aligned across sections. In-Service item interactions carved out; future portability wording less boxed in. |
+| `PRIVACY_POLICY.md`     | `2026-04-23-release-1`  | ACTIVE  | Apple + Google sign-in and platform billing disclosed. Privacy contact = `privacy@ascion.space`. Crash telemetry wording aligned with current product. Internal identifier language remains phase-0 safe. |
+| `STORE_SUBMISSION_CHECKLIST.md` | n/a | WORKING | Apple App Store + Google Play launch-readiness checklist based on current official platform guidance. |
 
-## Constraints these drafts are written under
+## Constraints these documents are written under
 
 Locked decisions (do not re-open without product-level reason):
 
 - **Minimum age: 16+ worldwide, including EEA.** COPPA-safe by exclusion;
   EEA parental-consent flow is explicitly not built.
 - **Governing law: Czech Republic** (the provider's jurisdiction).
-- **Sign-in: Apple Sign-In is the sole production authentication path.**
-  ToS/Privacy must not promise other auth methods.
+- **Sign-in: Apple Sign-In and Google Sign-In are supported production
+  authentication paths.** ToS/Privacy should stay aligned with the
+  actual shipped sign-in methods.
 - **No Web3 vocabulary in user-facing clauses.** Blockchain / crypto
   specifics are disclosed only where legally required, and prefer
   infrastructure-agnostic language (e.g., "pseudonymous internal account
   identifier" rather than "wallet address").
 - **No financial-product language.** Virtual credits are virtual credits,
   licensed to the user, not property, not a security, not a token.
-- **iOS-only at MVP.** Android-specific clauses are not included yet.
+- **Mobile launch: Apple App Store and Google Play.** Legal copy,
+  privacy disclosures, and store metadata should stay aligned across
+  both platforms.
 
-## What a counsel reviewer will specifically need to look at
+## What external counsel should specifically review next
 
-1. The arbitration / dispute-resolution clause — drafted as CZ-court
-   exclusive jurisdiction with an optional pre-litigation negotiation step.
-   Needs cross-check against EU consumer-rights rules (the "weaker party"
-   cannot be forced into disadvantageous arbitration).
+1. The governing-law / dispute-resolution clause — drafted as
+   Czech-law plus competent-Czech-court language with an optional
+   pre-litigation negotiation step. Needs cross-check against EU
+   consumer-rights rules so consumer forum rights are preserved where
+   mandatory law requires them.
 2. The "virtual items are licenses not property" language — needs
    validation against Czech consumer-protection statutes and the
    Digital Services Act where applicable.
 3. The privacy legal bases — currently claims `contract` for core service
    operation and `legitimate interest` for fraud/abuse logs. A reviewer
    should confirm the balancing tests hold.
-4. International data transfer language — placeholder SCC wording is
-   included; reviewer needs to confirm actual processor list and adequacy
-   status.
+4. International data transfer language — safeguard wording is
+   included; reviewer needs to confirm actual processor list, adequacy
+   status, and transfer documentation.
 5. Data retention periods — ranges are defensible defaults, not
    individually justified.
-6. DPO contact block is a placeholder. Real contact must be supplied
-   before public release.
+6. Privacy contact and DPO determination should be confirmed on an
+   ongoing basis. If no DPO is legally required, the policy should
+   keep a clear privacy point of contact such as `privacy@ascion.space`.
 7. The "pseudonymous internal account identifier" framing — reviewer
    should confirm this is defensible disclosure given the identifier is,
    technically, an on-chain address. The current framing is deliberately

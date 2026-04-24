@@ -1,17 +1,10 @@
 ---
-version: 2026-04-20-draft-3
-status: DRAFT — not reviewed by counsel
-effective: (pending)
+version: 2026-04-23-release-1
+status: ACTIVE
+effective: 2026-04-23
 ---
 
 # Terms of Service
-
-> **DRAFT NOTICE.** This document is a developer-written draft and has not
-> been reviewed by a qualified lawyer. It is placed in the repository to
-> support engineering scaffolding (the `auth.acceptTerms` endpoint and
-> client-side consent flow). It must be reviewed and revised by counsel
-> before any public release, including TestFlight distribution wider than
-> closed friends-and-family.
 
 ## 1. Who these terms are between
 
@@ -33,7 +26,8 @@ Kingdom, Switzerland, and every other region where the Service is offered.
 We do not operate a parental-consent flow and do not offer the Service to
 users under 16.
 
-You confirm your age by providing your date of birth during onboarding.
+You must confirm during onboarding that you meet this minimum-age
+requirement by completing the age-gate prompt presented in the Service.
 Providing false information about your age is a breach of these Terms
 and may result in termination of your account.
 
@@ -62,29 +56,37 @@ entertainment.
 
 - **Virtual items** (including in-game credits, items, ships, agents,
   cosmetic content, subscription benefits, and any other virtual
-  content — together, "**Virtual Items**") are **licensed to you, not
-  sold**. You do **not** own Virtual Items. You have no real-world
-  monetary claim against us for Virtual Items, and Virtual Items cannot
-  be redeemed for cash or any legally recognised form of property.
+  content — together, "**Virtual Items**") are digital entitlements
+  made available through the Service. Except to the extent mandatory
+  law provides otherwise, Virtual Items are **licensed to you, not
+  sold**, do not represent a deposit or stored monetary value, and do
+  not give you a right to receive cash from us.
 - Virtual Items have **no monetary value outside the Service** and are
   not intended to function as currency, investment, security, or
   financial instrument of any kind. No statement made by us, any
   employee, or any third party should be interpreted as a representation
   that Virtual Items constitute or will constitute a financial product.
-- In-app purchases are processed exclusively by **Apple** through the
-  App Store. All payments, refunds, billing disputes, and tax
-  collection are governed by Apple's terms in addition to these Terms.
+- Except where the Service expressly allows a particular transfer,
+  exchange, sale, or other item interaction as part of gameplay or an
+  in-Service feature, you may not buy, sell, trade, or transfer Virtual
+  Items outside the Service.
+- In-app purchases are processed through the platform operator for the
+  storefront from which you download the app, such as **Apple** through
+  the App Store or **Google** through Google Play. Payments, refunds,
+  billing disputes, and tax collection are governed by the applicable
+  platform terms in addition to these Terms.
 - **Ascion Prime** is an auto-renewing subscription. Billing, renewal,
-  and cancellation are managed through your Apple account settings.
-  Subscription benefits are provided only while the subscription is
-  active and for the period for which Apple has successfully charged
-  you.
-- We may, at our discretion and without compensation, modify, rebalance,
-  remove, reset, or discontinue Virtual Items and gameplay features at
-  any time, including in ways that affect the perceived value of
-  Virtual Items you have previously acquired. Because Virtual Items
-  are licensed rather than owned, no refund is owed for such changes,
-  except where applicable consumer-protection law requires otherwise.
+  and cancellation are managed through your Apple or Google account
+  settings, as applicable. Subscription benefits are provided only
+  while the subscription is active and for the period for which the
+  relevant platform has successfully charged you.
+- We may update, rebalance, remove, reset, or discontinue Virtual Items,
+  subscription benefits, and gameplay features where reasonably
+  necessary for operating, maintaining, improving, securing, or
+  complying with law for the Service, including where this affects the
+  availability or perceived value of previously acquired Virtual Items.
+  Where applicable consumer-protection law gives you a remedy, these
+  Terms do not limit it.
 
 ## 6. User conduct
 
@@ -98,8 +100,10 @@ You agree not to:
 - Use bots, automation, scripts, or unofficial clients to interact with
   the Service in ways that give you an advantage or disrupt other users;
 - Exploit bugs, glitches, or unintended mechanics for material gain;
-- Buy, sell, trade, or transfer accounts, characters, Virtual Items, or
-  access credentials outside the Service;
+- Buy, sell, trade, or transfer accounts or access credentials, or buy,
+  sell, trade, or transfer characters or Virtual Items outside the
+  Service except where the Service expressly permits an in-Service item
+  interaction;
 - Use the Service in violation of sanctions, export-control, or other
   applicable law;
 - Infringe any third party's intellectual property, privacy, or
@@ -138,30 +142,49 @@ Nothing here limits rights you have as a consumer under mandatory law.
 
 ## 9. Termination
 
-You may stop using the Service at any time. You may request deletion of
-your account through the in-app support channel or by contacting us at
-the address in Section 14.
+You may stop using the Service at any time. You may delete your
+account in one of the following ways:
+
+- **In-app (preferred):** open **Settings**, scroll to **Danger Zone**,
+  and tap **Delete Account**. You will be asked to type `DELETE` to
+  confirm.
+- **Public web form:** visit
+  `https://ascion.space/account-deletion` and follow the instructions
+  there.
+- **By email or post:** contact us at the email or postal address in
+  Section 14, using the subject line `[Account Deletion Request]`.
+
+Deletion is scheduled immediately when requested. You have **30 days**
+to change your mind by signing in again and selecting **Cancel
+deletion**; after that window, deletion becomes permanent and cannot
+be reversed. See the Privacy Policy for details on what is deleted,
+what is retained for legal reasons, and how on-chain assets are
+handled.
 
 We may suspend or terminate your access to the Service, in whole or in
-part, at any time, with or without notice, for any violation of these
-Terms, for suspected fraudulent or illegal activity, to comply with
-legal obligations, or to protect the Service or its users.
+part, where reasonably necessary for a violation of these Terms, for
+suspected fraudulent or illegal activity, to comply with legal
+obligations, to protect the Service or its users, or where we
+discontinue the Service. Where appropriate in the circumstances, we
+will give notice and an opportunity to cure before permanent account
+action.
 
-On termination, your license to use the Service ends, your access to
-Virtual Items ends, and — except where mandatory law requires otherwise —
-no refund is due.
+On termination, your license to use the Service ends and your ability to
+access or use Service features, including Virtual Items through the
+Service, may end, except to the extent mandatory law or express
+feature-specific terms provide otherwise. Unless mandatory law requires
+otherwise, no refund is due.
 
 ## 10. Changes to the Service and these Terms
 
 We may update the Service at any time.
 
-We may update these Terms at any time. If a change is material — meaning
-it reasonably affects your rights or obligations — we will notify you
-in-app by re-prompting you to accept the new version, and by bumping
-the **version string** at the top of this document. Your continued use
-of the Service after the effective date of the updated Terms constitutes
-acceptance. If you do not accept, you must stop using the Service and
-may request account deletion.
+We may update these Terms from time to time. If a change is material —
+meaning it reasonably affects your rights or obligations — we will
+notify you in-app by re-prompting you to accept the new version, and by
+bumping the **version string** at the top of this document. If you do
+not accept a material update, you must stop using the Service and may
+request account deletion.
 
 Each accepted version is recorded server-side against your account.
 
@@ -179,35 +202,37 @@ Service.
 
 ## 12. Third-party services
 
-The Service integrates with third-party services (notably **Apple** for
-authentication and payments, and a push-notification provider for
-transactional notifications). Your use of those services is subject to
-their respective terms. We are not responsible for third-party services.
+The Service integrates with third-party services, including **Apple**
+and **Google** for authentication, **Apple** and **Google** for
+platform payment and distribution services where applicable, and
+third-party infrastructure and messaging providers used to operate the
+Service. Your use of those third-party services is subject to their
+respective terms. We are not responsible for third-party services,
+except to the extent required by mandatory law.
 
 ## 13. Governing law and dispute resolution
 
 These Terms are governed by the laws of the **Czech Republic**, without
-regard to conflict-of-law rules, and subject to mandatory
-consumer-protection law of your place of habitual residence, which
-continues to apply to the extent it grants you stronger rights.
+regard to conflict-of-law rules. If you are a consumer, mandatory
+consumer-protection law of your place of habitual residence continues to
+apply to the extent it gives you stronger rights that cannot be
+contractually excluded.
 
 Before bringing a formal dispute, you agree to contact us in writing
 and attempt in good faith to resolve the matter for at least thirty
-(30) days. If unresolved, the **courts of the Czech Republic** have
-exclusive jurisdiction, subject again to any mandatory consumer
-jurisdiction right you have under the law of your place of habitual
-residence.
-
-If you are a consumer in the European Union, you may also use the
-European Commission's Online Dispute Resolution platform at
-`https://ec.europa.eu/consumers/odr`.
+(30) days. If unresolved, disputes will be submitted to the competent
+courts of the Czech Republic, unless mandatory law in your place of
+habitual residence gives you the right to bring a claim in another
+competent court.
 
 ## 14. Contact
 
-Questions about these Terms can be sent to **team@ascion.space**, or by
-post to 1101 Capital s.r.o., Lidická 700/19, Veveří, 602 00 Brno,
-Czech Republic. Czech administrative communications may also be sent to
-our Data Box (ID `zi6aisw`).
+Questions about these Terms can be sent to **team@ascion.space**.
+Privacy and account deletion requests may be sent to
+**privacy@ascion.space**. Postal mail may be sent to 1101 Capital
+s.r.o., Lidická 700/19, Veveří, 602 00 Brno, Czech Republic. Czech
+administrative communications may also be sent to our Data Box (ID
+`zi6aisw`).
 
 ## 15. Severability and interpretation
 
@@ -217,8 +242,9 @@ not affect interpretation.
 
 ## 16. Version
 
-- **Version:** `2026-04-20-draft-3`
-- **Status:** DRAFT — not reviewed by counsel.
+- **Version:** `2026-04-23-release-1`
+- **Effective:** `2026-04-23`
+- **Status:** Active.
 - **Acceptance tracking:** The server records the accepted version string
   on your account. When this version string changes, you will be asked
   to review and accept the updated Terms on next launch.

@@ -1,7 +1,7 @@
 ---
-version: 2026-04-23-release-1
+version: 2026-04-24-release-1
 status: ACTIVE
-effective: 2026-04-23
+effective: 2026-04-24
 ---
 
 # Privacy Policy
@@ -242,17 +242,19 @@ address in Section 12), your account enters a **30-day grace period**
 during which you can cancel the request by signing in again and
 selecting **Cancel deletion**. At the end of that period, we
 permanently delete your profile, gameplay data, sign-in identifiers
-(Apple ID or Google ID), device-binding tokens, and retire the private
-key of your in-game managed wallet. Where you signed in with Apple, we
-also revoke your Apple refresh token so that Ascion no longer appears
-in your Apple ID's "Apps Using Apple ID" list.
+(Apple ID or Google ID), device-binding tokens, and disable or retire
+internal credentials and service-managed technical access associated
+with your account. Where you signed in with Apple, we also revoke the
+relevant Apple authentication token so that the app no longer remains
+connected to your Apple sign-in on our side.
 
-**On-chain assets.** Before the managed wallet key is retired, any
-tokens and NFTs it holds are transferred on-chain to the Ascion
-treasury address on Polygon. Because a public blockchain is an
-immutable ledger, the on-chain transaction history itself cannot be
-erased — only the association between the wallet address and your
-personal identity is removed from our systems.
+**Residual technical records.** Some technical records associated with
+account operation may need to be preserved in minimal form for system
+integrity, security, fraud prevention, legal compliance, or because the
+underlying infrastructure does not support full erasure of every
+historical record. Where that occurs, we remove or sever the
+association between those records and your personal identity in our
+systems to the extent reasonably possible.
 
 **What is retained, in minimal and de-identified form.** In-app
 purchase records (for Czech accounting and VAT law, up to 10 years);
@@ -305,7 +307,7 @@ timeframes required by law.
 **Settings** → **Danger Zone** → **Delete Account**. You can also use
 the public form at `https://ascion.space/account-deletion`. See
 Section 9 for the full deletion process, including the 30-day grace
-period and how on-chain assets are handled.
+period and how residual technical records are handled.
 
 For other rights, questions about this Policy, or any other
 data-protection matter, email **privacy@ascion.space**.
@@ -324,8 +326,8 @@ version is recorded server-side against your account.
 
 ## 14. Version
 
-- **Version:** `2026-04-23-release-1`
-- **Effective:** `2026-04-23`
+- **Version:** `2026-04-24-release-1`
+- **Effective:** `2026-04-24`
 - **Status:** Active.
 - **Acceptance tracking:** The server records the accepted version
   string on your account. When this version string changes, you will

@@ -13,8 +13,8 @@ EU consumer protection, GDPR, virtual-goods law, and any future Web3
 or portability disclosures.
 
 Every user-facing document is versioned with a `version` field at the top
-(e.g., `version: 2026-04-23-release-1`) and each publish cuts a matching git
-tag (e.g., `v2026-04-23-release-1`). The server's `auth.acceptTerms` endpoint
+(e.g., `version: 2026-04-24-release-1`) and each publish cuts a matching git
+tag (e.g., `v2026-04-24-release-1`). The server's `auth.acceptTerms` endpoint
 records the accepted version string on the `Account`. Any material change
 to a document means a new version string, a new tag, and re-prompting the
 user for acceptance on next launch.
@@ -33,8 +33,8 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-04-23-release-1`  | ACTIVE  | Apple + Google Sign-In. Platform billing/distribution wording aligned across sections. In-Service item interactions carved out; future portability wording less boxed in. |
-| `PRIVACY_POLICY.md`     | `2026-04-23-release-1`  | ACTIVE  | Apple + Google sign-in and platform billing disclosed. Privacy contact = `privacy@ascion.space`. Crash telemetry wording aligned with current product. Internal identifier language remains phase-0 safe. |
+| `TERMS_OF_SERVICE.md`   | `2026-04-24-release-1`  | ACTIVE  | Apple + Google Sign-In. Platform billing/distribution wording aligned across sections. In-Service item interactions carved out; delete-account flow added without explicit Web3 deletion language. |
+| `PRIVACY_POLICY.md`     | `2026-04-24-release-1`  | ACTIVE  | Apple + Google sign-in and platform billing disclosed. Privacy contact = `privacy@ascion.space`. Delete-account flow documented in infrastructure-agnostic terms. Internal identifier language remains phase-0 safe. |
 | `STORE_SUBMISSION_CHECKLIST.md` | n/a | WORKING | Apple App Store + Google Play launch-readiness checklist based on current official platform guidance. |
 
 ## Constraints these documents are written under

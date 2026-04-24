@@ -1,7 +1,7 @@
 ---
-version: 2026-04-23-release-1
+version: 2026-04-24-release-1
 status: ACTIVE
-effective: 2026-04-23
+effective: 2026-04-24
 ---
 
 # Terms of Service
@@ -158,8 +158,8 @@ Deletion is scheduled immediately when requested. You have **30 days**
 to change your mind by signing in again and selecting **Cancel
 deletion**; after that window, deletion becomes permanent and cannot
 be reversed. See the Privacy Policy for details on what is deleted,
-what is retained for legal reasons, and how on-chain assets are
-handled.
+what is retained for legal reasons, and how residual technical records
+associated with the account are handled.
 
 We may suspend or terminate your access to the Service, in whole or in
 part, where reasonably necessary for a violation of these Terms, for
@@ -242,8 +242,8 @@ not affect interpretation.
 
 ## 16. Version
 
-- **Version:** `2026-04-23-release-1`
-- **Effective:** `2026-04-23`
+- **Version:** `2026-04-24-release-1`
+- **Effective:** `2026-04-24`
 - **Status:** Active.
 - **Acceptance tracking:** The server records the accepted version string
   on your account. When this version string changes, you will be asked

@@ -64,8 +64,8 @@ Known gaps:
   sandbox/production fixtures and deployment verification remain pending.
 - Safe refund/revocation reconciliation is implemented locally for Prime,
   credits, storage, and accommodation entitlements, including a guarded
-  manual-review API for unsafe cases. Migration, deployment, notification
-  security, and production operations verification remain pending.
+  manual-review API for unsafe cases. Production `db:push`, deployment,
+  notification security, and production operations verification remain pending.
 - Prime is monthly-only in mobile, the local server whitelist, and the draft
   Terms. Any dormant yearly product must remain unavailable in store metadata.
 - The server accepts any non-empty Terms and Privacy version submitted by a
@@ -149,8 +149,8 @@ Known gaps:
   - Add moderation-action and appeal records with policy basis, reason,
     moderator/source, duration, notification state, and decision history.
   - Define deletion and retention behavior for all new records.
-  - Done when schema validation, migrations, generated types, and focused model
-    tests pass.
+  - Done when schema validation, production `db:push`, generated types, and
+    focused model tests pass.
 
 - [ ] **G1.2 Add player report endpoints.**
   - Support reporting a message, player profile/identifier, organization,
@@ -288,9 +288,9 @@ Known gaps:
   - Keep database state authoritative and separately reconcile any optional
     blockchain settlement.
   - Local progress: automatic safe reversal and guarded manual review/resolution
-    endpoints are implemented with focused tests. Apply the migration, deploy,
-    secure notification ingestion, and verify the operator workflow before
-    checking this release gate.
+    endpoints are implemented with focused tests. Run production `db:push`,
+    deploy, secure notification ingestion, and verify the operator workflow
+    before checking this release gate.
   - Done when every refund event reaches a terminal audited outcome.
 
 - [ ] **G2.6 Align the server catalog, mobile UI, and store catalog.**

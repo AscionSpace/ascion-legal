@@ -43,7 +43,7 @@ Already present:
   checks.
 - Usernames have a server-side forbidden-word check.
 - IAP purchases are server-verified and transaction IDs are idempotent.
-- Prime renewal and cancellation-status notifications have partial handlers.
+- Prime renewal and cancellation-status notifications have deployed handlers.
 - Account deletion removes chat messages, memberships, invitations, and
   friendships from the deleting account.
 - Mobile embeds versioned Terms and Privacy content and records acceptance
@@ -57,15 +57,22 @@ Known gaps:
 - No moderation queue or moderation audit/appeal surface in Command.
 - Chat, organization descriptions, and invitation text do not use a shared
   content-safety filter.
-- Restore Purchases is implemented in state logic but exposed only in the
-  developer IAP test screen.
-- Full Apple server-notification JWS verification is implemented locally for
-  the outer notification and nested transaction/renewal payloads. Live Apple
-  sandbox/production fixtures and deployment verification remain pending.
-- Safe refund/revocation reconciliation is implemented locally for Prime,
-  credits, storage, and accommodation entitlements, including a guarded
-  manual-review API for unsafe cases. Production `db:push`, deployment,
-  notification security, and production operations verification remain pending.
+- Restore Purchases is exposed to normal players in Settings and the Prime
+  purchase screen. It reconciles each available store transaction through the
+  idempotent server verification path and reports full success, no purchases,
+  partial failure, pending items, and retry guidance. Reinstall and same-store-
+  account device QA remain outstanding.
+- Full Apple server-notification JWS verification is deployed for the outer
+  notification and nested transaction/renewal payloads. The production Apple
+  app ID, live schema, and V2 Sandbox/Production notification URLs are verified,
+  and an Apple-originated Sandbox `TEST` delivery succeeded on 2026-08-11.
+- Safe refund/revocation reconciliation is deployed for Prime, credits,
+  storage, and accommodation entitlements, including guarded manual review for
+  unsafe cases. Real Sandbox cancellation, expiry, refund, revocation, replay,
+  and operator-workflow QA remain blocking MVP evidence.
+- Apple's production Server API returns 401 while Ascion 1.0 remains
+  `PREPARE_FOR_SUBMISSION`; repeat the production notification `TEST` after the
+  first public App Store release unlocks production API access.
 - Prime is monthly-only in mobile, the local server whitelist, and the draft
   Terms. Any dormant yearly product must remain unavailable in store metadata.
 - The server accepts any non-empty Terms and Privacy version submitted by a
@@ -242,24 +249,28 @@ Known gaps:
 ## G2 — IAP implementation and disclosure
 
 - [ ] **G2.1 Expose Restore Purchases to normal players.**
-  - Add a visible action in Settings and relevant purchase screens.
-  - Restore Prime and permanent accommodation entitlements, reconcile existing
-    server grants idempotently, and clearly explain that consumed credit/storage
-    purchases are not replayed as new grants.
-  - Show per-product success, no-purchases-found, partial failure, and retry
-    results.
+  - Implemented 2026-08-11: visible actions are present in Settings and the
+    Prime screen.
+  - Implemented: every available transaction is reconciled through the existing
+    idempotent server verification path, and the UI explains that consumed
+    credit/storage purchases are not replayed as new grants.
+  - Implemented: per-product success, no-purchases-found, partial failure,
+    pending, and retry results are shown.
   - Done when restore works after reinstall and on another device using the same
-    store and Ascion accounts.
+    store and Ascion accounts. This device QA remains blocking evidence.
 
 - [ ] **G2.2 Fully verify App Store server-notification JWS payloads.**
   - Replace decode-only parsing with certificate-chain, bundle, app, environment,
     and signed-data verification using Apple's supported server library/process.
   - Reject unverifiable notifications without mutating player state.
-  - Local progress: Apple's `SignedDataVerifier` now validates the certificate
+  - Deployed progress: Apple's `SignedDataVerifier` validates the certificate
     chain, signature, bundle, app ID, and environment for the notification and
     verifies nested signed transaction/renewal claims before invoking any
-    entitlement handler. Tamper, environment, and handler-isolation tests pass.
-    Keep this unchecked until live Sandbox and Production-signed fixtures pass.
+    entitlement handler. Tamper, environment, and handler-isolation tests pass;
+    Apple recorded a successful signed Sandbox `TEST` delivery to the deployed
+    V2 endpoint on 2026-08-11. Keep this unchecked until the real Sandbox
+    lifecycle scenarios pass and a production `TEST` succeeds after the first
+    public App Store release unlocks production Server API access.
   - Done when valid production/sandbox fixtures pass and tampered fixtures fail.
 
 - [ ] **G2.3 Make notification processing retry-safe and idempotent.**
@@ -287,10 +298,11 @@ Known gaps:
   - Create a manual review queue for cases that cannot be reversed safely.
   - Keep database state authoritative and separately reconcile any optional
     blockchain settlement.
-  - Local progress: automatic safe reversal and guarded manual review/resolution
-    endpoints are implemented with focused tests. Run production `db:push`,
-    deploy, secure notification ingestion, and verify the operator workflow
-    before checking this release gate.
+  - Deployed progress: automatic safe reversal and guarded manual
+    review/resolution endpoints are implemented with focused tests; production
+    schema, configuration, deployment, and signed Sandbox notification delivery
+    are verified. Real Sandbox refund/revocation, replay, and operator-workflow
+    evidence remains the blocking MVP boundary.
   - Done when every refund event reaches a terminal audited outcome.
 
 - [ ] **G2.6 Align the server catalog, mobile UI, and store catalog.**

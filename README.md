@@ -5,12 +5,11 @@ legal copy (Terms of Service, Privacy Policy). Both the backend
 (`ascion-server`) and the marketing site (`ascion-website`) consume it as a
 git submodule pinned to a tag — never edit these files inside those repos.
 
-These documents are the current **release-tracked** user-facing legal
-copy for Ascion. They have been finalised internally from industry
-templates and are intended for public TestFlight and production use.
-External counsel review remains strongly recommended, especially for
-EU consumer protection, GDPR, virtual-goods law, and any future Web3
-or portability disclosures.
+The active release remains the last published tag. The Terms file on
+`main` may be a review draft ahead of a new legal release; its frontmatter
+controls that status. External counsel review remains strongly recommended,
+especially for EU consumer protection, GDPR, virtual-goods law, user-generated
+content and moderation, and any future Web3 or portability disclosures.
 
 Every user-facing document is versioned with a `version` field at the top
 (e.g., `version: 2026-04-24-release-1`) and each publish cuts a matching git
@@ -33,9 +32,10 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-04-24-release-1`  | ACTIVE  | Apple + Google Sign-In. Platform billing/distribution wording aligned across sections. In-Service item interactions carved out; delete-account flow added without explicit Web3 deletion language. |
+| `TERMS_OF_SERVICE.md`   | `2026-08-11-draft-2`    | DRAFT   | Records Apple-only IAP, monthly-only Prime, safe refund/revocation handling, `safety@ascion.space`, chat/UGC moderation, organizations, and trading. Pending product and counsel review; not published. |
 | `PRIVACY_POLICY.md`     | `2026-04-24-release-1`  | ACTIVE  | Apple + Google sign-in and platform billing disclosed. Privacy contact = `privacy@ascion.space`. Delete-account flow documented in infrastructure-agnostic terms. Internal identifier language remains phase-0 safe. |
 | `STORE_SUBMISSION_CHECKLIST.md` | n/a | WORKING | Apple App Store + Google Play launch-readiness checklist based on current official platform guidance. |
+| `LEGAL_RELEASE_READINESS_TODO.md` | n/a | WORKING | Ordered implementation and release checklist for social safety, moderation, IAP reliability, privacy, legal acceptance, QA, and publication. |
 
 ## Constraints these documents are written under
 
@@ -55,7 +55,8 @@ Locked decisions (do not re-open without product-level reason):
   licensed to the user, not property, not a security, not a token.
 - **Mobile launch: Apple App Store and Google Play.** Legal copy,
   privacy disclosures, and store metadata should stay aligned across
-  both platforms.
+  both platforms. IAP remains Apple-only until Google Play verification and
+  lifecycle handling are implemented.
 
 ## What external counsel should specifically review next
 
@@ -83,6 +84,16 @@ Locked decisions (do not re-open without product-level reason):
    technically, an on-chain address. The current framing is deliberately
    infrastructure-agnostic; lawyer may need to strengthen the disclosure
    if crypto specifics become legally necessary.
+8. The social/UGC clauses and actual moderation operation — confirm DSA
+   classification and notice/action duties, response and appeal handling,
+   retention of reported content, and whether a dedicated legal contact
+   point is required.
+9. The IAP clauses — confirm treatment of consumable credits, repeatable
+   permanent storage, permanent accommodation entitlements, subscription
+   renewal/cancellation, refunds/revocations, and cross-platform access.
+10. The Privacy Policy should be revised before the same release to cover
+    chat messages, social graphs, presence, organization content, reports,
+    moderation records, and the expanded purchase/entitlement catalogue.
 
 ## How to update
 

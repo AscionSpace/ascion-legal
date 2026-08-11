@@ -274,14 +274,23 @@ Known gaps:
   - Done when valid production/sandbox fixtures pass and tampered fixtures fail.
 
 - [ ] **G2.3 Make notification processing retry-safe and idempotent.**
-  - Persist notification identity/hash and processing outcome.
-  - Return a retryable failure status for transient processing failures instead
-    of always acknowledging them with HTTP 200.
-  - Local progress: invalid verification receives HTTP 400, transient Apple
+  - Implemented locally 2026-08-11: verified notification UUID/hash, environment,
+    type, transaction identity, signed time, attempt count, status, error, and
+    handler outcome are persisted in `IapStoreNotification`.
+  - Implemented: exact successful replays return the recorded outcome without
+    rerunning entitlement logic; concurrent claims return retryable HTTP 503;
+    failed claims retry immediately; abandoned processing claims can be safely
+    reclaimed; UUID reuse with different signed content is rejected.
+  - Implemented: invalid verification receives HTTP 400, transient Apple
     verification failure receives 503, and post-verification processing failure
-    receives 500. Notification identity/outcome persistence remains pending.
-  - Prevent duplicate renewal, refund, or revocation effects.
-  - Done when replay, out-of-order delivery, DB failure, and recovery tests pass.
+    receives 500 and a durable `FAILED` outcome.
+  - Implemented: refund/revocation reconciliation remains terminal/idempotent,
+    renewal expiration only moves forward, and auto-renew status updates use the
+    signed Apple event time so older or concurrent events cannot overwrite newer
+    state.
+  - Local replay, out-of-order, DB failure/recovery, stale-claim, concurrency,
+    and identity-conflict tests pass. Keep this unchecked until `npm run db:push`
+    (no migration), server deployment, and deployed webhook read-back pass.
 
 - [ ] **G2.4 Complete subscription lifecycle handling.**
   - Cover subscribe, renew, renewal-status changes, billing retry/grace period,

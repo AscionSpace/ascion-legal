@@ -302,6 +302,19 @@ Known gaps:
     and player-visible state from authoritative store data.
   - Emit operational alerts for unknown products/accounts and unreconciled
     events.
+  - Implemented locally 2026-08-13: verified `SUBSCRIBED`, `DID_RENEW`,
+    `DID_CHANGE_RENEWAL_STATUS`, `DID_FAIL_TO_RENEW` with and without grace,
+    `GRACE_PERIOD_EXPIRED`, `EXPIRED`, and `RENEWAL_EXTENDED` events now
+    reconcile the Apple transaction ledger, `AccountSubscription`, and
+    `Account.primeUntil`. Cancellation retains access through the paid expiry;
+    grace retains access only through Apple's signed grace deadline; failed
+    renewal without grace, grace expiry, and terminal expiry remove access.
+    Signed event-time guards prevent older lifecycle events from overwriting
+    newer state, and unknown products/accounts or otherwise unreconciled events
+    fail retryably with Sentry alerts instead of being silently acknowledged.
+    The focused IAP suite passes 56 tests and the server build passes. Keep G2.4
+    unchecked until the real StoreKit sandbox lifecycle matrix and deployed
+    database read-back pass.
   - Done when the lifecycle matrix is covered by tests and sandbox events.
 
 - [ ] **G2.5 Implement safe refund/revocation reconciliation.**

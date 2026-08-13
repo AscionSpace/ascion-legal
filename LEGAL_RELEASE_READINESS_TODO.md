@@ -273,7 +273,7 @@ Known gaps:
     public App Store release unlocks production Server API access.
   - Done when valid production/sandbox fixtures pass and tampered fixtures fail.
 
-- [ ] **G2.3 Make notification processing retry-safe and idempotent.**
+- [x] **G2.3 Make notification processing retry-safe and idempotent.**
   - Implemented locally 2026-08-11: verified notification UUID/hash, environment,
     type, transaction identity, signed time, attempt count, status, error, and
     handler outcome are persisted in `IapStoreNotification`.
@@ -289,8 +289,11 @@ Known gaps:
     signed Apple event time so older or concurrent events cannot overwrite newer
     state.
   - Local replay, out-of-order, DB failure/recovery, stale-claim, concurrency,
-    and identity-conflict tests pass. Keep this unchecked until `npm run db:push`
-    (no migration), server deployment, and deployed webhook read-back pass.
+    and identity-conflict tests pass. Closed 2026-08-13 after `npm run db:push`
+    (no migration), successful Railway deployment, a fresh Apple Sandbox `TEST`
+    recorded by Apple as `SUCCESS`, production inbox read-back as `SUCCEEDED`,
+    and an identical deployed-webhook replay returning `duplicate: true` while
+    the persisted `attemptCount` remained `1`.
 
 - [ ] **G2.4 Complete subscription lifecycle handling.**
   - Cover subscribe, renew, renewal-status changes, billing retry/grace period,

@@ -1,7 +1,8 @@
 # Ascion legal — release-tracked user-facing copy
 
 This repository is the **single source of truth** for Ascion's user-facing
-legal copy (Terms of Service, Privacy Policy). Both the backend
+legal copy (Terms of Service, Privacy Policy, and Community and Content
+Policy). Both the backend
 (`ascion-server`) and the marketing site (`ascion-website`) consume it as a
 git submodule pinned to a tag — never edit these files inside those repos.
 
@@ -32,8 +33,9 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-08-11-draft-2`    | DRAFT   | Records Apple-only IAP, monthly-only Prime, safe refund/revocation handling, `safety@ascion.space`, chat/UGC moderation, organizations, and trading. Pending product and counsel review; not published. |
+| `TERMS_OF_SERVICE.md`   | `2026-08-15-draft-3`    | DRAFT   | Records Apple and Google IAP, monthly-only Prime, safe refund/revocation handling, `safety@ascion.space`, chat/UGC moderation, organizations, and trading. Pending product and counsel review; not published. |
 | `PRIVACY_POLICY.md`     | `2026-08-15-draft-1`    | DRAFT   | Covers social/chat/translation, organizations, trading, Discord, purchases, analytics, retention, deletion, and rights. Pending processor/configuration verification, store-disclosure alignment, product review, and counsel review; the last published tag remains active. |
+| `COMMUNITY_CONTENT_POLICY.md` | `2026-08-15-draft-1` | DRAFT | Records the approved MVP rules, enforcement ladder, reporting, blocking, moderation notices, automation boundary, and appeals. Pending implementation alignment, product/counsel review, links, and publication. |
 | `STORE_SUBMISSION_CHECKLIST.md` | n/a | WORKING | Apple App Store + Google Play launch-readiness checklist based on current official platform guidance. |
 | `LEGAL_RELEASE_READINESS_TODO.md` | n/a | WORKING | Ordered implementation and release checklist for social safety, moderation, IAP reliability, privacy, legal acceptance, QA, and publication. |
 
@@ -47,10 +49,10 @@ Locked decisions (do not re-open without product-level reason):
 - **Sign-in: Apple Sign-In and Google Sign-In are supported production
   authentication paths.** ToS/Privacy should stay aligned with the
   actual shipped sign-in methods.
-- **No Web3 vocabulary in user-facing clauses.** Blockchain / crypto
-  specifics are disclosed only where legally required, and prefer
-  infrastructure-agnostic language (e.g., "pseudonymous internal account
-  identifier" rather than "wallet address").
+- **No blockchain or Web3 product scope.** Gameplay, purchases, entitlements,
+  marketplace flows, and moderation must work without blockchain
+  infrastructure. User-facing legal copy must not imply that Ascion offers a
+  blockchain, crypto, token, or portability feature.
 - **No financial-product language.** Virtual credits are virtual credits,
   licensed to the user, not property, not a security, not a token.
 - **Mobile launch: Apple App Store and Google Play.** Legal copy,

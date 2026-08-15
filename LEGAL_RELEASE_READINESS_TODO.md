@@ -2,7 +2,7 @@
 
 Status: working implementation plan
 Prepared: 2026-08-11
-Scope: the `2026-08-11-draft-2` Terms release and the product changes needed
+Scope: the `2026-08-15-draft-3` Terms release and the product changes needed
 to make its social and purchase statements true in production.
 
 This is an implementation checklist, not legal advice. Keep the affected
@@ -11,6 +11,14 @@ below are complete, or explicitly reduce the release scope.
 
 ## Decisions recorded on 2026-08-11
 
+- The MVP public scope includes all current social and trading features: world,
+  organization, and direct chat; player search, friendships, presence,
+  reporting and blocking; organizations and invitations; direct trading; and
+  marketplace trading.
+- The MVP public purchase scope includes monthly Prime, credits, storage,
+  accommodations, and Restore Purchases on both Apple App Store and Google
+  Play. Every category and platform remains blocked until its applicable G1,
+  G2, G3, and G4 evidence gates pass.
 - Prime remains monthly-only. The yearly SKU must not be exposed or accepted.
 - Google Play billing verification, acknowledgement, restore/query, lifecycle
   notifications, refund handling, and focused tests are implemented. Android
@@ -19,11 +27,16 @@ below are complete, or explicitly reduce the release scope.
 - Refunded Prime is revoked automatically. Credits, storage, and accommodation
   entitlements are reversed automatically only when player state remains valid;
   unsafe cases go to guarded manual review without an immediate deduction.
-- `safety@ascion.space` is the public social-safety and appeal address. Monitoring
-  ownership and response targets still need to be assigned.
+- `safety@ascion.space` is the sole MVP social-safety and appeal contact. No
+  backup person is required for MVP. Target first response is within 24 hours
+  for urgent safety reports and within three business days for ordinary reports
+  and appeals.
 - Ascion does not sell randomized containers or randomized rewards. Any future
   change to that decision reopens product, legal, odds, age-rating, and store
   disclosure review.
+- Blockchain and Web3 are not part of the MVP product or legal-release scope.
+  No gameplay, purchase, entitlement, marketplace, or moderation flow may
+  require blockchain infrastructure.
 
 ## Release gates
 
@@ -84,30 +97,40 @@ Known gaps:
 
 ## G0 — decisions to make first
 
-- [ ] **G0.1 Decide the public launch scope.**
-  - Decide whether chat, organizations, direct trading, and every IAP category
-    launch together or in phases.
-  - If any critical gate cannot be completed, keep that feature disabled by a
-    production feature flag rather than relying on Terms text alone.
-  - Done when the launch matrix names each feature and its target release.
+- [x] **G0.1 Decide the public launch scope.**
+  - Launch all current social and trading features for MVP: world,
+    organization, and direct chat; player search, friendships, presence,
+    reporting and blocking; organizations and invitations; direct trading; and
+    marketplace trading.
+  - Launch monthly Prime, credits, storage, accommodations, and Restore
+    Purchases on both Apple App Store and Google Play.
+  - Yearly Prime and randomized purchases or rewards are excluded. Blockchain
+    and Web3 are not product features and cannot be dependencies.
+  - "Launch all" does not waive any critical release gate. Keep an affected
+    feature disabled until its applicable implementation, store, device,
+    safety, legal, and production-evidence gates pass.
 
-- [ ] **G0.2 Decide the moderation contact and response ownership.**
-  - `safety@ascion.space` is the selected public address and works through the
-    domain catch-all. Confirm a monitored destination and named owners before
-    launch.
-  - Name the people responsible for first response, urgent escalation,
-    moderation decisions, and appeals.
-  - Define target response times for ordinary, urgent-safety, and allegedly
-    illegal-content reports.
-  - Done when the contact works, is monitored, and has an owner rota/runbook.
+- [x] **G0.2 Decide the moderation contact and response ownership.**
+  - `safety@ascion.space` is the sole public and operational contact for MVP and
+    works through the domain catch-all.
+  - No backup person or owner rota is required for MVP.
+  - Target first response is within 24 hours for urgent safety reports and
+    within three business days for ordinary reports and appeals. Allegedly
+    illegal-content reports use the urgent target until the final counsel-led
+    procedure is approved under G3.4.
+  - Revisit staffing and escalation coverage as report volume grows.
 
-- [ ] **G0.3 Decide the moderation policy.**
-  - Approve report categories, prohibited-content categories, warning versus
-    removal rules, temporary and permanent social restrictions, account-ban
-    thresholds, and appeal rules.
-  - Decide what automated filtering will block, hold for review, or merely
-    flag; avoid a naive substring list as the only chat safety control.
-  - Done when engineering has an approved, versioned policy specification.
+- [x] **G0.3 Decide the moderation policy.**
+  - The approved MVP baseline is recorded in
+    `COMMUNITY_CONTENT_POLICY.md` (`2026-08-15-draft-1`).
+  - Enforcement progresses from removal/warning through 24-hour, 7-day, and
+    30-day social restrictions; 7-day or 30-day account suspensions; and
+    permanent termination. Serious safety violations may skip earlier steps.
+  - Automated controls may reject clear prohibited identifiers, spam, malicious
+    links, and flooding or flag uncertain content. They cannot permanently
+    terminate an account solely from an automated text match.
+  - Players may appeal removals, restrictions, suspensions, and termination.
+    For MVP, the sole operator may conduct a fresh, separately recorded review.
 
 - [x] **G0.4 Decide the Prime catalog.**
   - Decision: monthly-only for now. The yearly SKU is removed from the local
@@ -121,8 +144,8 @@ Known gaps:
     and Prime.
   - Define safe behavior when credits were spent, storage is occupied, or an
     accommodation is assigned when a refund arrives.
-  - Preserve database-only operation; blockchain settlement must remain
-    optional and cannot be required to correct an entitlement.
+  - Preserve database-only operation. Blockchain is not part of the product and
+    cannot be required to correct an entitlement.
   - Decision: revoke refunded Prime automatically. Reverse credits, storage,
     and accommodations automatically only when the database state remains
     valid; otherwise preserve player state and create a guarded manual review.
@@ -323,8 +346,8 @@ Known gaps:
   - Implement the approved G0.5 behavior for Prime, credits, storage, and
     accommodations.
   - Create a manual review queue for cases that cannot be reversed safely.
-  - Keep database state authoritative and separately reconcile any optional
-    blockchain settlement.
+  - Keep database state authoritative; no blockchain settlement is part of the
+    product scope.
   - Deployed progress: automatic safe reversal and guarded manual
     review/resolution endpoints are implemented with focused tests; production
     schema, configuration, deployment, and signed Sandbox notification delivery
@@ -432,9 +455,10 @@ Known gaps:
 
 - [ ] **G3.2 Finalize the Terms draft.**
   - Apply G0 decisions and counsel changes to `TERMS_OF_SERVICE.md`.
-  - Resolve monthly versus yearly Prime, Apple-only versus multi-platform IAP,
-    reporting contact, moderation/appeal promises, refund wording, and
-    randomized-reward wording.
+  - Verify the final copy reflects the decided monthly-only Prime catalog,
+    Apple and Google IAP scope, `safety@ascion.space` contact,
+    moderation/appeal policy, refund handling, and absence of randomized
+    purchases or rewards.
   - Keep mandatory consumer rights and actual product limitations explicit.
   - Done when product, engineering, operations, and counsel approve one final
     release candidate.
@@ -444,6 +468,9 @@ Known gaps:
     examples, enforcement range, reporting route, and appeal route.
   - Link it from first social use, chat safety actions, moderation notices, the
     website, and store support metadata where appropriate.
+  - Drafted `2026-08-15-draft-1` from the approved G0.3 baseline. Keep this
+    gate unchecked until counsel/product review, implementation alignment,
+    public website publication, and in-app links are complete.
   - Done when it is versioned and accessible without signing in.
 
 - [ ] **G3.4 Create an electronic illegal-content/reporting route.**

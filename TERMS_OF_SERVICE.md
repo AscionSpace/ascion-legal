@@ -1,5 +1,5 @@
 ---
-version: 2026-08-11-draft-2
+version: 2026-08-15-draft-3
 status: DRAFT — pending product and counsel review
 effective: (pending)
 ---
@@ -77,10 +77,11 @@ entertainment.
   exchange, sale, or other item interaction as part of gameplay or an
   in-Service feature, you may not buy, sell, trade, or transfer Virtual
   Items outside the Service.
-- In-app purchases currently offered through the Service are processed by
-  **Apple** through the App Store. Google Play in-app purchases are not
-  currently offered. Payments, refunds, billing disputes, and tax collection
-  are governed by the applicable platform terms in addition to these Terms.
+- In-app purchases offered through the Service are processed by **Apple**
+  through the App Store or by **Google** through Google Play, depending on your
+  device and the platform through which the product is offered. Payments,
+  refunds, billing disputes, and tax collection are governed by the applicable
+  platform terms in addition to these Terms.
 - The Service may offer different purchase types, including consumable
   credit packs, repeatable permanent storage expansions, permanent agent
   accommodation entitlements, and auto-renewing subscriptions. The
@@ -89,8 +90,9 @@ entertainment.
   if they differ from a general description in these Terms.
 - **Ascion Prime** is offered as a monthly auto-renewing subscription.
   Billing, renewal, cancellation, and any free-trial terms are managed
-  through your Apple account settings. Subscription benefits are provided
-  only while the subscription is active and Apple recognizes your entitlement.
+  through your applicable Apple or Google account settings. Subscription
+  benefits are provided only while the subscription is active and the
+  applicable platform recognizes your entitlement.
 - Restorable purchases and active subscriptions may be restored using
   the supported platform and in-app restore flow. Consumable purchases
   are not restorable through the platform after consumption, although
@@ -310,8 +312,8 @@ your Player Content to us.
 ## 14. Third-party services
 
 The Service integrates with third-party services, including **Apple**
-and **Google** for authentication and app distribution, **Apple** for
-the in-app purchases currently offered, and third-party infrastructure
+and **Google** for authentication, app distribution, and applicable in-app
+purchases, and third-party infrastructure
 and messaging providers used to operate the Service. Your use of those
 third-party services is subject to their respective terms. We are not
 responsible for third-party services, except to the extent required by
@@ -349,7 +351,7 @@ not affect interpretation.
 
 ## 18. Version
 
-- **Version:** `2026-08-11-draft-2`
+- **Version:** `2026-08-15-draft-3`
 - **Effective:** Pending publication.
 - **Status:** Draft — pending product and counsel review.
 - **Acceptance tracking:** The server records the accepted version string

@@ -362,11 +362,30 @@ Known gaps:
     confirmation.
 
 - [ ] **G2.8 Define the Android boundary.**
-  - Current verification is Apple-specific. Either keep Android IAP unavailable
-    and word the release accordingly, or implement Google Play Billing purchase
-    verification, acknowledgements, restore/query, lifecycle events, refunds,
-    and test coverage before claiming Google IAP support.
-  - Done when store availability and legal wording match actual platform support.
+  - The implementation is no longer Apple-specific. The Android client loads
+    localized Google Play products and subscription offers, binds purchases to
+    the signed-in Ascion account with an obfuscated account ID, handles pending
+    purchases, and exposes the shared restore/query flow. The server verifies
+    purchase tokens against the Google Play Developer API, checks product and
+    account ownership, grants idempotently, then consumes consumables or
+    acknowledges durable products and Prime after the entitlement transaction.
+  - Authenticated Real-time developer notifications validate the Pub/Sub OIDC
+    identity and Android package, then re-query authoritative Play state before
+    reconciling Prime renewal, cancellation, grace, hold, pause, expiry,
+    revocation, one-time purchases, and voided/refunded purchases.
+  - Focused tests cover purchase parsing, account binding, rejected pending/held
+    purchases, consume/acknowledge behavior, acknowledgement races, Pub/Sub route
+    authentication, package validation, test-notification parsing, subscription
+    activation, scheduled cancellation, account-hold suspension, revocation,
+    voided refunds, and one-time notification fulfillment.
+  - Keep Android IAP out of public availability claims until Play Console catalog
+    and service-account permissions are read back, Pub/Sub OIDC configuration and
+    a Play Console test notification succeed against the deployed server, and an
+    internal-track physical-device matrix records transaction and database
+    evidence. G2.6 catalog alignment and G2.9 device QA remain separate hard
+    gates.
+  - Done when store availability, deployed configuration, recorded Play
+    evidence, and legal wording all match actual Android support.
 
 - [ ] **G2.9 Run the IAP device/sandbox matrix.**
   - Test success, cancel, pending, duplicate callback, network loss before and

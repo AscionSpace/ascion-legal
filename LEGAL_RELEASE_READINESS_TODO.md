@@ -331,6 +331,9 @@ Known gaps:
   - Done when every refund event reaches a terminal audited outcome.
 
 - [ ] **G2.6 Align the server catalog, mobile UI, and store catalog.**
+  - Deferred from the active implementation queue on 2026-08-15. This item is
+    not waived: it is a hard MVP release gate that must be reopened and closed
+    before App Store or Google Play submission.
   - Remove or hide dormant SKUs, or expose them intentionally.
   - Verify product type, localized name, description, price, territory,
     availability, benefit, and server grant for every SKU.

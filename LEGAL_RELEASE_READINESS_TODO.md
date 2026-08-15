@@ -173,6 +173,10 @@ Known gaps:
 ### Server and data model
 
 - [ ] **G1.1 Add durable social-safety records.**
+  - Implemented 2026-08-15: directional blocks, reports with immutable
+    snapshots/hashes, actions, notices, appeals, and append-only audit events
+    are represented in Prisma and applied with `db:push`. Keep unchecked until
+    focused model/retention and production read-back evidence is complete.
   - Add a directional player block model rather than relying solely on the
     existing friendship row.
   - Add content-report records with reporter, target account, optional message,
@@ -185,6 +189,11 @@ Known gaps:
     focused model tests pass.
 
 - [ ] **G1.2 Add player report endpoints.**
+  - Implemented 2026-08-15: authenticated message, player, organization,
+    invitation, direct-trade, and other-target reporting performs access checks,
+    snapshots evidence, rate-limits and deduplicates submissions, and returns a
+    reference code. Keep unchecked until the complete authorization/privacy
+    matrix is exercised.
   - Support reporting a message, player profile/identifier, organization,
     invitation, and direct trade offer.
   - Require a reason category, accept optional context, deduplicate abusive
@@ -195,6 +204,10 @@ Known gaps:
     tests pass.
 
 - [ ] **G1.3 Add block and unblock endpoints with full enforcement.**
+  - Implemented 2026-08-15 across search, friendships, direct threads/messages,
+    direct trades, organization invitations, chat visibility, presence,
+    social notifications, and unread counts; blocking cancels pending direct
+    offers. Keep unchecked until race-condition and real-client QA passes.
   - Enforce blocks in player search, friend requests, direct-thread creation,
     direct messages, direct-trade offers, organization invitations, presence,
     push notifications, and unread counts.
@@ -205,6 +218,10 @@ Known gaps:
   - Done when two-direction and race-condition tests cover every social path.
 
 - [ ] **G1.4 Apply a shared content-safety pipeline.**
+  - Implemented 2026-08-15 with Unicode/evasion normalization, identifier-only
+    reserved terms, severe-content and suspicious-link checks, duplicate-message
+    protection, flooding controls, neutral errors, and social write limits.
+    Keep unchecked pending the full adversarial/localization corpus.
   - Cover username, organization name/tag/description, invitation text, world
     chat, organization chat, direct chat, and trade-offer messages.
   - Normalize Unicode and common evasion safely; separate hard legal/safety
@@ -215,6 +232,10 @@ Known gaps:
   - Done when adversarial, false-positive, Unicode, and localization tests pass.
 
 - [ ] **G1.5 Add moderation actions and reason notices.**
+  - Implemented 2026-08-15: warning, reversible message removal, identifier
+    rename, timed social restriction, suspension, permanent ban, organization
+    removal, durable notice, push, and audit history are available to Command.
+    Keep unchecked until action/reversal authorization and client-consistency QA.
   - Allow authorized operators to remove/restore content, rename identifiers,
     restrict posting, remove organization membership where permitted, and
     suspend accounts.
@@ -226,6 +247,9 @@ Known gaps:
     and visible consistently across clients.
 
 - [ ] **G1.6 Add an appeal workflow.**
+  - Implemented 2026-08-15: eligible users can submit one durable appeal per
+    action; Command can uphold or overturn it, preserving reviewer identity,
+    reason, audit history, and reversal state. End-to-end QA remains open.
   - Let an affected user appeal an eligible moderation decision electronically.
   - Prevent the same operator from silently overwriting history; append review
     decisions and record reversals.
@@ -235,6 +259,9 @@ Known gaps:
 ### Mobile
 
 - [ ] **G1.7 Add message and profile safety actions.**
+  - Implemented 2026-08-15 in mobile direct chat with message Report and player
+    Report/Block actions, category selection, optional context, confirmation,
+    and a returned reference code. Device/accessibility QA remains open.
   - Add Report to message actions and Report/Block to player/profile actions.
   - Include clear categories, optional details, confirmation, report reference,
     safety guidance, and a link to the applicable rules.
@@ -243,12 +270,17 @@ Known gaps:
   - Done when a normal player can report and block in a few clear steps.
 
 - [ ] **G1.8 Add blocked-player management.**
+  - Implemented 2026-08-15 in the Settings Safety Center with immediate
+    Unblock and social-query refresh. Device QA remains open.
   - Add a Settings screen listing blocked players with an explicit Unblock
     action and consequences.
   - Done when state refreshes immediately across search, friends, threads, and
     notifications.
 
 - [ ] **G1.9 Add moderation-decision and appeal UI.**
+  - Implemented 2026-08-15 in the Settings Safety Center with durable notices,
+    reasons, policy codes, decision state, and appeal submission/status.
+    Push-deeplink, accessibility, and localization QA remain open.
   - Show the affected content/account action, reason, duration, policy link,
     and appeal control where eligible.
   - Done when notice remains accessible after push dismissal and supports
@@ -257,6 +289,9 @@ Known gaps:
 ### Command and operations
 
 - [ ] **G1.10 Build a least-privilege moderation queue in Command.**
+  - Implemented 2026-08-15 behind the existing admin procedure, with report
+    filters, evidence/case detail, status assignment, enforcement, appeals, and
+    audit history. Permission/redaction rehearsal and action QA remain open.
   - Filter by urgency, category, surface, status, and age.
   - Show only necessary context, related reports, prior actions, and relevant
     account risk signals.
@@ -474,6 +509,10 @@ Known gaps:
   - Done when it is versioned and accessible without signing in.
 
 - [ ] **G3.4 Create an electronic illegal-content/reporting route.**
+  - Implemented 2026-08-15 in source: a signed-out website form submits the
+    distinct required notice fields to a rate-limited public server endpoint
+    and receives a reference code. Deployment, acknowledgement/decision-email
+    operation, and counsel review remain open.
   - Based on counsel's DSA advice, provide the necessary public mechanism and
     contact point, required notice fields, acknowledgements, decision notices,
     and appeal information.
@@ -491,6 +530,10 @@ Known gaps:
   - Done when deletion tests match the approved matrix.
 
 - [ ] **G3.6 Make legal acceptance server-authoritative.**
+  - Implemented 2026-08-15 in source: configured published versions are checked
+    server-side, invented/stale versions are rejected, and protected procedures
+    require current acceptance while acceptance/account-deletion routes remain
+    reachable. Old-client/device QA and deployment remain open.
   - Build current published Terms/Privacy versions into server configuration or
     a reviewed release artifact.
   - Reject arbitrary or stale acceptance versions.

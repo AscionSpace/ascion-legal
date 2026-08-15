@@ -17,11 +17,11 @@ processing activities, transfer assessment, store disclosure, or legal advice.
 | Discord link | Discord ID, username, global name, avatar URL, connection time, role-sync marker | Optional linking, guild membership, Commander/Primer role sync; Discord | Until disconnect or account deletion; Discord-side history follows Discord's policy | Implemented; production QA pending |
 | Chat | Message text/type, sender, thread, sent/edit/delete/read state, membership | World, organization, and direct chat; authorized players | Account life; deleting account deletes authored messages and translations | Implemented |
 | Chat translation | Selected source message, target language, translated text, source hash, provider/model | OpenAI generates on demand with `store:false`; cached in Ascion for authorized readers | Provider may temporarily retain API content under its terms; Ascion cache follows source message | Versioned first-use disclosure, account-level permission and server enforcement implemented locally; DB push, deployment and device QA pending |
-| Friend/social graph | Requests, relationship status, blocking fields, last interaction, counts, private nickname/note | Social connections, direct-chat authorization, player discovery | Account life; relationships deleted with either deleted account | Partially implemented; complete block/unblock UX remains gated |
+| Friend/social graph | Requests, relationship status, directional blocks, last interaction, counts, private nickname/note | Social connections, direct-chat authorization, player discovery | Account life; relationships deleted with either deleted account | Directional block enforcement and Settings management implemented; release QA remains gated |
 | Presence | Short-lived socket/account presence, persistent last-seen timestamp | Online indicators and friend presence | Socket presence expires in about 3 minutes; last-seen follows account | Implemented |
 | Organizations | Name, tag, description, media, visual identity, member roles, invitations/requests and messages | Organization identity, membership, organization chat | Membership/invites/requests deleted with account; shared organization may remain; sole leader must transfer leadership | Implemented; end-to-end QA pending |
 | Direct trades | Parties, item, quantity, price, reservation, response, expiry, settlement/failure | Private player-to-player offers and settlement | Operational/account life; account deletion resolves entanglements and deletes/reparents affected records according to integrity needs | Implemented; QA pending |
-| Reports and moderation | Reporter/target, content/context, category, evidence snapshot/hash, action, appeal, reviewer history | Safety review, enforcement, appeals, legal duties | Draft target: active case plus generally 24 months after closure; longer for repeat abuse or legal hold | Policy-covered release target; durable models and complete UX not yet implemented |
+| Reports and moderation | Reporter/target, content/context, category, evidence snapshot/hash, action, appeal, reviewer history | Safety review, enforcement, appeals, legal duties | Draft target: active case plus generally 24 months after closure; longer for repeat abuse or legal hold | Durable models, player UX, public intake, and Command workflow implemented; retention automation and release QA remain gated |
 | Gameplay | Agents, ships, inventory, balances, progression, missions, world actions, transactions | Provide and secure the game | Account life; player-specific records deleted; shared world objects may remain without personal attribution | Implemented |
 | Purchases/subscriptions | Store, product, transaction/order ID, receipt/token hash, environment, expiry, renewal, refund/reversal/manual-review state | Apple/Google verification, entitlement, accounting, fraud/disputes | Ledger retained up to 10 years where legally required and reparented to deleted-user record on deletion | Implemented; store lifecycle/device QA gated |
 | Notifications | Push token, platform, active state, delivery tickets/receipts, notification content/status | Expo Push, APNs/FCM delivery and troubleshooting | Token until invalid/replaced/permission withdrawal/deletion; receipts only for retry/troubleshooting | Implemented |
@@ -48,9 +48,9 @@ processing activities, transfer assessment, store disclosure, or legal advice.
   friendships, notifications, and player-specific rows. It reparents limited
   purchase, subscription, sales, activity, and audit records to a deleted-user
   system account and may preserve shared world objects without player attribution.
-- Complete report, moderation-action, appeal, and directional block models are
-  still release-gated. Policy wording covers the intended data flow conditionally
-  and does not establish that those workflows are currently available.
+- Report, moderation-action, notice, appeal, audit, and directional-block
+  models were implemented and applied with `db:push` on 2026-08-15. Production
+  deployment, retention automation, and end-to-end release QA remain gated.
 
 ## Store-disclosure mapping to verify before publication
 

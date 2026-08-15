@@ -12,8 +12,10 @@ below are complete, or explicitly reduce the release scope.
 ## Decisions recorded on 2026-08-11
 
 - Prime remains monthly-only. The yearly SKU must not be exposed or accepted.
-- IAP remains Apple-only until Google Play backend verification, acknowledgement,
-  restore/query, lifecycle notifications, refund handling, and QA are complete.
+- Google Play billing verification, acknowledgement, restore/query, lifecycle
+  notifications, refund handling, and focused tests are implemented. Android
+  IAP must remain out of public availability claims until Play Console,
+  deployed Pub/Sub, internal-track device, and database evidence gates close.
 - Refunded Prime is revoked automatically. Credits, storage, and accommodation
   entitlements are reversed automatically only when player state remains valid;
   unsafe cases go to guarded manual review without an immediate deduction.
@@ -406,6 +408,22 @@ Known gaps:
     treatment, retention periods, account-deletion effects, and user rights.
   - Reconcile Mixpanel/Firebase/Sentry payloads with actual code and store privacy
     disclosures.
+  - Drafted `2026-08-15-draft-1` on 2026-08-15 with a checked-in data inventory.
+    It now covers chat messages and cached translations, friendships, presence,
+    organizations, invitations, direct trades, conditional reporting/moderation
+    records, Apple/Google purchases and reversals, Discord linking and role sync,
+    named infrastructure/processors, legal bases, transfers, retention, deletion,
+    and user rights. The code audit corrected two prior statements: Mixpanel does
+    receive the Ascion username as a people-profile property, and Firebase
+    Analytics is not integrated (Firebase Cloud Messaging is used for push).
+    OpenAI receives selected chat text for on-demand translation with provider
+    storage disabled, and the account-deletion worker retains limited purchase,
+    sales, subscription, activity, and deletion-audit records under a deleted-user
+    system account. Keep G3.1 unchecked until configured Mixpanel/Sentry retention,
+    processor agreements and transfer safeguards, first-use OpenAI disclosure and
+    permission, the analytics consent/objection design required by applicable law
+    and store rules, Apple privacy labels, Google Play Data safety answers,
+    product review, and counsel review are complete.
   - Done when the data inventory and policy match field by field.
 
 - [ ] **G3.2 Finalize the Terms draft.**

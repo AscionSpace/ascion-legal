@@ -1,334 +1,395 @@
 ---
-version: 2026-04-24-release-1
-status: ACTIVE
-effective: 2026-04-24
+version: 2026-08-15-draft-1
+status: DRAFT — pending product, processor, and counsel review
+effective: (pending)
 ---
 
 # Privacy Policy
 
-This Privacy Policy explains how we collect, use, share, and protect
-personal data when you use the **Ascion** mobile application and
-related online services (the "**Service**"). It is written with the
-**EU General Data Protection Regulation (GDPR)** in mind and is
-intended to serve EU/EEA, UK, Swiss, and global users alike, as
-supplemented by local law.
+> **Review draft.** This version reflects Ascion's current account, gameplay,
+> social, chat-translation, organization, direct-trading, analytics, Discord,
+> and in-app-purchase features. It is not effective until it has completed
+> product and legal review and is published through Ascion's release-tracked
+> legal process.
 
-## 1. Who we are (the controller)
+This Privacy Policy explains how **1101 Capital s.r.o.** collects, uses,
+shares, retains, and protects personal data when you use the **Ascion** mobile
+application and related online services (the "**Service**"). It is written
+with the EU General Data Protection Regulation ("**GDPR**") in mind and also
+applies to users in the United Kingdom, Switzerland, and other regions,
+subject to applicable local law.
 
-The **controller** of your personal data for the purposes of applicable
-data-protection law is **1101 Capital s.r.o.**, a Czech limited
-liability company with registered office at Lidická 700/19, Veveří,
-602 00 Brno, Czech Republic (IČO: 07180969; Data Box ID: `zi6aisw`).
+## 1. Controller and contact
 
-**Privacy contact:** For any privacy or data-protection matter —
-including questions about this Policy and requests to exercise your
-rights described in §10 — email **privacy@ascion.space**. We have not
-formally appointed a Data Protection Officer at this stage; the
-address above is the single privacy contact. If our processing grows
-to a scale that requires a DPO under Article 37 GDPR, we will appoint
-one and update this Policy accordingly.
+The controller is **1101 Capital s.r.o.**, a Czech limited liability company
+with registered office at Lidická 700/19, Veveří, 602 00 Brno, Czech Republic
+(IČO: 07180969; Data Box ID: `zi6aisw`).
 
-## 2. What personal data we collect
+For privacy questions or requests, email **privacy@ascion.space**. We have not
+formally appointed a Data Protection Officer. If that changes, we will update
+this Policy.
 
-We collect only what is needed to operate and secure the Service.
+## 2. Personal data we collect
 
-### 2.1. You provide directly
+### 2.1 Account, authentication, and preferences
 
-- **Sign-in provider identifiers.** When you sign in with **Apple** we
-  receive a stable Apple-issued user identifier and, optionally, the
-  email address and name you choose to share; if you use Apple's "Hide
-  My Email" feature we receive a relay email address, not your primary
-  address. When you sign in with **Google** we receive a stable
-  Google-issued user identifier and the email address associated with
-  that Google account, plus the name and profile-picture URL where
-  Google exposes them. We receive only the fields the respective
-  sign-in provider sends; we do not scrape additional data from your
-  Apple ID or Google account.
-- **Username** you choose.
-- **Age-gate confirmation.** During onboarding you confirm that you
-  meet the minimum-age rule by checking the relevant age-gate prompt.
-  We record the result of that confirmation and the associated
-  timestamp. We do **not** collect or store your date of birth.
+Depending on the sign-in and optional features you use, we process:
 
-### 2.2. Automatically, as you use the Service
+- a stable Apple- or Google-issued account identifier;
+- your email address, relay email address, name, and profile image where the
+  sign-in provider makes those fields available;
+- your Ascion username, internal account identifier, profile/avatar image,
+  preferred language, timezone, onboarding state, and settings;
+- your confirmation that you are at least 16 and the confirmation timestamp;
+- the versions and timestamps of Terms and Privacy Policy acceptances;
+- authentication and session records, including a Sign in with Apple refresh
+  token where available so we can revoke the Apple connection on deletion; and
+- if you choose to link Discord: your Discord user ID, username, global display
+  name, avatar URL, connection timestamp, and whether an Ascion subscription
+  role is recorded as assigned. Discord access tokens used during OAuth are not
+  retained as account profile data after the connection flow.
 
-- **Device identifiers** (a device-level identifier we generate; the
-  operating-system and app version; non-persistent device-model
-  information).
-- **Push-notification token** if you grant push permission, used to
-  deliver transactional in-game notifications.
-- **Server logs**, including timestamped records of the in-app actions
-  you take, for operational, anti-fraud, anti-abuse, and debugging
-  purposes. Logs may contain IP address, user-agent, and request
-  metadata.
-- **Event analytics** — the in-game actions you take (e.g., starting a
-  mission, completing a craft, an in-app purchase), session events, and
-  screen transitions, sent to our product-analytics processor in
-  pseudonymous form to help us understand how the Service is used and
-  improve it. See §7 for the named processors.
-- **Coarse location** — country, region, and city inferred from your
-  IP address by our analytics processors, used to report the
-  geographic distribution of active users in aggregate. We do **not**
-  collect precise (GPS-level) location.
-- **Crash and performance telemetry.** Personally identifying context is
-  scrubbed at the source where possible.
-- **Gameplay state**, which is inherent to operating the Service (your
-  agents, ships, credits balance, progression state, purchase history,
-  and similar).
+We do not collect your date of birth.
 
-### 2.3. A pseudonymous internal account identifier
+### 2.2 Social, chat, organization, and player-created content
 
-The Service assigns every account a **pseudonymous internal identifier**
-that the system uses as a stable reference for operating the Service,
-attributing actions to accounts, and maintaining consistency across
-backend services. This identifier is not linked to your real-world
-identity, does not by itself reveal personal data, and is not shown to
-other users. It is technical infrastructure for the Service.
+When you use social features, we process content and relationship data such as:
 
-Depending on how the Service is operated internally, this identifier
-may be derived from or reference a cryptographic key generated and held
-by the Service on your behalf. **We do not provide the identifier, any
-associated cryptographic material, or access to any underlying
-infrastructure to you as a user, and no user-facing cryptocurrency or
-"wallet" functionality is offered through the Service at this stage.**
-Users do not manage this identifier directly through the Service as it
-currently operates. If that changes materially, we will update this
-Policy before the relevant feature is rolled out.
+- world, organization, and direct chat messages, message type, sender, thread,
+  timestamps, edit/deletion state, read state, and thread membership;
+- on-demand chat translations, target language, translated text, a hash of the
+  source text, translation provider/model, and timestamps;
+- player search results, friend requests, friendships, relationship status,
+  interaction counts, and any private nickname or note you save for a friend;
+- online presence, short-lived connection state, and last-seen time;
+- organization names, tags, descriptions, images, visual identity, membership,
+  roles, invitations, membership requests, and accompanying messages;
+- direct item-trade offers, participants, item and quantity, price, reservation,
+  response, settlement, expiry, and failure state; and
+- usernames, avatars, achievements, contributions, marketplace activity, and
+  other profile or gameplay information intentionally displayed to other
+  players through Service features.
 
-### 2.4. Payment data
+Do not include information in player-created content that you do not want other
+authorized users of the relevant social space to see.
 
-In-app purchases are processed by the applicable platform operator,
-such as **Apple** or **Google**. We do not see, store, or process your
-payment-card, billing-address, or equivalent payment data. The platform
-operator provides us with transaction records or purchase receipts that
-we validate to credit your account.
+### 2.3 Safety reports, moderation, and appeals
 
-## 3. What we do **not** collect
+Where reporting, moderation, or appeal features are available, we process the
+reporter and reported account, the reported message/profile/organization/
+invitation/trade, category, explanation, relevant thread or organization,
+timestamps, status, and a limited evidence snapshot or hash. We also process
+moderation decisions, policy basis, restrictions, reviewer notes, notices,
+appeals, and decision history.
 
-We do not collect:
+We use these records to investigate abuse, protect users, enforce our Terms,
+prevent repeat or retaliatory reporting, support appeals, and comply with legal
+notice-and-action duties. Automated filters or risk signals may help prioritize
+review, but we do not make decisions producing legal or similarly significant
+effects solely by automated means.
 
-- Precise geolocation.
-- Contacts, calendar, photos, microphone, or camera content.
-- Biometric data.
-- Advertising identifiers (IDFA on iOS, AAID on Android). The Service
-  does not serve advertisements and does not integrate with advertising
-  networks; we explicitly disable advertising-personalization signals
-  in our analytics processors and do not request App Tracking
-  Transparency permission on iOS.
-- Payment-card data.
+### 2.4 Gameplay, transactions, and purchases
 
-## 4. Legal bases for processing (GDPR Art. 6)
+We process the gameplay state needed to provide the Service, including your
+agents, ships, inventory, storage, missions, organizations, virtual-credit
+balance, progression, activity history, and transactions with other players or
+game systems.
 
-We process your personal data under the following legal bases:
+Apple or Google processes your payment instrument and billing details. We do
+not receive your full payment-card number or billing address. We receive and
+retain the purchase information needed to verify and administer entitlements,
+including the store, product ID, transaction or order identifier, purchase-token
+or receipt hash, verification environment and time, subscription expiry and
+renewal state, and refund, revocation, or manual-review outcome. Raw Google
+purchase tokens and raw Apple receipt payloads are not stored in the purchase
+ledger after verification.
 
-| Purpose                                                                    | Legal basis                              |
-| -------------------------------------------------------------------------- | ---------------------------------------- |
-| Creating and operating your account, enabling gameplay, processing IAPs   | Performance of a contract (Art. 6(1)(b)) |
-| Enforcing minimum-age rule                                                | Legal obligation and legitimate interest (Art. 6(1)(c), 6(1)(f)) |
-| Fraud prevention, anti-abuse, server-log retention, security investigations | Legitimate interest (Art. 6(1)(f))       |
-| Sending transactional push notifications                                  | Performance of a contract (Art. 6(1)(b)) with consent for device-level notification permission (given via OS prompt) |
-| Crash and performance telemetry                                           | Legitimate interest (Art. 6(1)(f)) |
-| Product analytics (feature use, session patterns, aggregate geographic distribution of active users) | Legitimate interest (Art. 6(1)(f)); subject to your right to object under Art. 21 GDPR and any consent requirement imposed by applicable ePrivacy or similar rules |
-| Responding to legal claims and requests from authorities                  | Legal obligation (Art. 6(1)(c))          |
+### 2.5 Device, notifications, logs, analytics, and diagnostics
 
-We do **not** rely on consent as the legal basis for core service
-operation; consent is relied upon only where it is the correct basis
-under law (for example, device push permission and, where required by
-applicable law, certain analytics or device-storage technologies).
+We process:
 
-## 5. How we use your data
+- app-generated device identifiers, operating system, platform, app version,
+  build number, and device-model information;
+- push tokens and delivery/receipt status if you enable notifications;
+- IP address, user agent, request metadata, timestamps, authentication events,
+  rate-limit and security signals, and operational logs;
+- app interactions, screens, sessions, gameplay actions, purchase funnel events,
+  product IDs, failure categories, and related product analytics;
+- your internal account ID and Ascion username in Mixpanel user profiles;
+- approximate country, region, or city inferred from IP address by analytics or
+  infrastructure providers; and
+- crash reports, stack traces, performance traces, and diagnostic context.
 
-We use the data described above to:
+We configure Sentry with default personally identifying information disabled
+and apply redaction filters, but diagnostic data can still contain account,
+device, route, or event context needed to investigate a fault.
 
-- Authenticate you and maintain your session.
-- Provide gameplay, progression, rewards, and subscription benefits.
-- Credit in-app purchases to your account.
-- Deliver transactional push notifications (e.g., "your mission is
-  complete").
-- Detect and prevent fraud, cheating, abuse, and security incidents.
-- Diagnose bugs and improve stability.
-- Comply with legal obligations and respond to lawful requests.
+### 2.6 Chat translation and AI processing
 
-We do not use your personal data for third-party advertising. We do
-not sell your personal data.
+Translation is initiated for an individual chat message when an authorized user
+selects the translation action. The source message and requested target language
+are sent to **OpenAI** solely to generate the translation. The request is made
+with provider-side response storage disabled. OpenAI states that API data is not
+used to train its models by default, although limited temporary retention for
+abuse monitoring or legal compliance may still apply under OpenAI's service
+terms unless a qualifying zero-data-retention arrangement is active.
 
-## 6. Minimum age
+We store the resulting translation in Ascion so authorized readers requesting
+the same message and language can reuse it without another provider request.
+The cached translation is linked to the source message and is deleted when the
+source message is deleted during account erasure.
 
-The Service is not offered to users under **16 years of age**, in any
-region. We enforce this through an onboarding age gate and block
-further use of the Service below this threshold. We do not operate a
-parental-consent flow.
+Before this draft is released, the translation flow must clearly disclose the
+OpenAI transfer at the point of first use and obtain any permission required by
+app-store rules or applicable law.
 
-If we learn that we have inadvertently collected personal data from a
-user under 16, we will delete it promptly. You can also contact us to
-request deletion.
+### 2.7 Data we do not intentionally collect
 
-## 7. Who we share data with
+We do not intentionally collect precise GPS location, contacts, calendars,
+photos, microphone or camera content, biometric data, advertising identifiers,
+or payment-card details. The Service does not currently serve third-party ads,
+sell personal data, or request App Tracking Transparency permission for
+cross-company tracking.
 
-We share data only with the following categories of recipients, and
-only to the extent necessary for the purposes above:
+## 3. Where personal data comes from
 
-- **Apple Inc.** — authentication (Sign in with Apple), payment
-  processing (App Store IAP), and app distribution (App Store /
-  TestFlight).
-- **Google LLC** — authentication (Sign in with Google); app
-  distribution and payment processing through Google Play where the
-  Android version is offered there; **Firebase Cloud Messaging** for
-  transactional push notifications; and **Firebase Analytics** for
-  usage analytics and active-user reporting at country, region, and
-  city granularity, configured with advertising-personalization
-  signals disabled.
-- **Mixpanel, Inc.** — product analytics (events, funnels, retention).
-  Processing is performed on Mixpanel's EU infrastructure
-  (`api-eu.mixpanel.com`). We identify users to Mixpanel by the
-  pseudonymous internal account identifier only; no email, real name,
-  payment data, or precise location is sent to Mixpanel.
-- **Functional Software, Inc.** (operating as **Sentry**) — crash and
-  performance telemetry. Sentry is configured with personally
-  identifying context scrubbed at the source (default PII disabled and
-  a purpose-built redaction filter applied).
-- **Cloud infrastructure providers** that host the Service (such as
-  server hosting, managed database, object storage, and content
-  delivery providers). They process data on our instructions as data
-  processors under written contracts and may change from time to time
-  as we operate the Service.
-- **Professional advisors** (legal, accounting, compliance) where
-  necessary.
-- **Authorities, courts, or other parties** where we are legally
-  required to share data or where we have a legitimate interest in
-  protecting the Service, its users, or others from fraud or harm.
+We receive personal data:
 
-We do **not** sell personal data, and we do **not** share data with
-advertising networks.
+- directly from you when you create content, choose settings, make requests,
+  link Discord, or contact us;
+- from Apple, Google, Discord, and the applicable app store when you use their
+  authentication, distribution, billing, or notification services;
+- automatically from your app, device, and network when you use the Service;
+- from other players when they invite, message, trade with, report, or otherwise
+  interact with you; and
+- from our service providers when they return delivery, verification, analytics,
+  security, translation, or diagnostic results.
 
-## 8. International transfers
+## 4. Why we process personal data and our legal bases
 
-Some of our processors may be located in, or may access personal data
-from, countries outside the European Economic Area, the United Kingdom,
-or Switzerland. Where we transfer personal data internationally, we do
-so under an appropriate safeguard recognised by applicable
-data-protection law, typically the European Commission's **Standard
-Contractual Clauses (SCCs)**, the UK International Data Transfer
-Addendum or equivalent UK safeguard, the Swiss recognised transfer
-mechanism, or — where available — an applicable adequacy decision.
+| Purpose | Main GDPR legal basis |
+| --- | --- |
+| Create and operate accounts; authenticate users; provide gameplay, social features, organizations, chat, direct trades, purchases, entitlements, and requested translations | Performance of a contract, Art. 6(1)(b) |
+| Display usernames, avatars, presence, messages, organizations, achievements, contributions, and transaction context to the users who are entitled to see them | Performance of a contract, Art. 6(1)(b), and legitimate interests, Art. 6(1)(f) |
+| Prevent fraud, cheating, abuse, account compromise, and service disruption; enforce rules; investigate reports; moderate content; handle appeals | Legitimate interests, Art. 6(1)(f), and legal obligation where applicable, Art. 6(1)(c) |
+| Verify age-gate completion and protect minors | Legal obligation, Art. 6(1)(c), and legitimate interests, Art. 6(1)(f) |
+| Send transactional push notifications | Performance of a contract, Art. 6(1)(b), with device permission requested through the operating system |
+| Measure feature use and improve the Service through product analytics | Legitimate interests, Art. 6(1)(f), subject to your right to object and any consent required by ePrivacy or local law |
+| Diagnose crashes, monitor performance, maintain logs, and secure infrastructure | Legitimate interests, Art. 6(1)(f) |
+| Keep purchase, accounting, tax, deletion, and legally required records; respond to authorities and legal claims | Legal obligation, Art. 6(1)(c), and legitimate interests, Art. 6(1)(f) |
 
-You may contact us using the details in Section 12 if you would like
-more information about the safeguards used for a particular category of
-transfer.
+Where we rely on legitimate interests, those interests are operating, securing,
+improving, and enforcing a fair multiplayer service, protecting users and our
+legal rights, and maintaining reliable transaction records. You may object as
+described in Section 11.
 
-## 9. Retention
+## 5. Who can see or receive personal data
 
-We keep personal data only as long as necessary for the purposes for
-which it was collected, after which we delete or anonymise it.
+### 5.1 Other users
 
-Our standard retention periods are:
+Your username, avatar, online/last-seen status, public profile and achievement
+information, organization identity and membership, public marketplace or
+contribution activity, and content posted in shared social spaces may be visible
+to other users. Direct messages, direct trades, private organizations, and
+friend-only information are limited to the participants or authorized members,
+subject to moderation and operational access.
 
-- **Account data and gameplay state:** for the life of the account, and
-  up to **12 months** after deletion or prolonged inactivity, for fraud
-  prevention and dispute handling.
-- **Server logs with IP and request metadata:** typically **30–90 days**
-  for operational purposes, longer only where a specific investigation
-  requires it.
-- **Purchase and receipt records:** for the period required by tax and
-  accounting law in our jurisdiction (typically several years), in a
-  minimal form.
-- **Crash / performance telemetry:** **up to 90 days** in identifiable
-  form, after which aggregated statistics only.
+### 5.2 Service providers and platforms
 
-**Account deletion process.** When you request deletion (in-app via
-**Settings** → **Danger Zone** → **Delete Account**, via the public
-form at `https://ascion.space/account-deletion`, or by email to the
-address in Section 12), your account enters a **30-day grace period**
-during which you can cancel the request by signing in again and
-selecting **Cancel deletion**. At the end of that period, we
-permanently delete your profile, gameplay data, sign-in identifiers
-(Apple ID or Google ID), device-binding tokens, and disable or retire
-internal credentials and service-managed technical access associated
-with your account. Where you signed in with Apple, we also revoke the
-relevant Apple authentication token so that the app no longer remains
-connected to your Apple sign-in on our side.
+We disclose personal data only as needed to operate the relevant function:
 
-**Residual technical records.** Some technical records associated with
-account operation may need to be preserved in minimal form for system
-integrity, security, fraud prevention, legal compliance, or because the
-underlying infrastructure does not support full erasure of every
-historical record. Where that occurs, we remove or sever the
-association between those records and your personal identity in our
-systems to the extent reasonably possible.
+- **Apple** — Sign in with Apple, App Store/TestFlight distribution, in-app
+  purchases, refunds, and server notifications;
+- **Google** — Sign in with Google, Google Play distribution and billing,
+  Firebase Cloud Messaging, and Google Play purchase/lifecycle verification;
+- **Expo / 650 Industries** — app build/update services and Expo push delivery;
+- **OpenAI** — on-demand translation of the selected chat message;
+- **Discord** — optional account linking, guild membership checks, and Commander
+  or Prime-related role assignment/removal;
+- **Mixpanel** — EU-hosted product analytics using the internal account ID,
+  username, platform/app context, and recorded product events;
+- **Sentry / Functional Software** — crash, error, and performance monitoring;
+- **Railway** — application hosting and Redis-backed operational services;
+- **Neon** — managed PostgreSQL database hosting;
+- **Amazon Web Services** — object/media storage and related delivery services;
+- **Cloudflare** — domain, content-delivery, and administrative-access security;
+- **Resend** — closed-testing invitation email delivery where that program is
+  used; and
+- other hosting, security, delivery, and professional service providers acting
+  under contract and only as needed for the Service.
 
-**What is retained, in minimal and de-identified form.** In-app
-purchase records (for Czech accounting and VAT law, up to 10 years);
-enforcement records where you were sanctioned for a Terms violation,
-to prevent circumvention; and audit entries pertaining to the
-deletion event itself. These records are stripped of direct
-identifiers where possible.
+We require processors and other recipients handling personal data on our behalf
+to protect it consistently with this Policy and applicable law.
 
-## 10. Your rights
+We may also disclose information to professional advisers, courts, regulators,
+law-enforcement bodies, or other parties where required by law or reasonably
+necessary to establish, exercise, or defend legal claims; protect users or the
+Service; investigate fraud or harm; or complete a corporate transaction subject
+to appropriate safeguards.
 
-Subject to applicable law, you have the right to:
+We do not sell personal data and do not share it with advertising networks.
 
-- **Access** the personal data we hold about you.
-- **Rectify** inaccurate or incomplete personal data.
-- **Erasure** ("right to be forgotten") of personal data we hold about
-  you, subject to our legitimate retention grounds above.
-- **Restrict** or **object** to certain processing based on legitimate
-  interests.
-- **Data portability** — receive a copy of data you provided, in a
-  structured, commonly used, machine-readable format, where processing
-  is based on contract or consent.
-- **Withdraw consent** at any time where processing is based on consent
-  (this does not affect the lawfulness of processing before the
-  withdrawal).
-- **Lodge a complaint** with your national data-protection authority.
-  In the Czech Republic, this is the **Úřad pro ochranu osobních údajů
-  (ÚOOÚ)**, `https://www.uoou.cz`.
+## 6. International transfers
 
-To exercise any of these rights, contact us at the address in Section
-12. We will respond within the timeframes required by applicable law
-(generally within one month under GDPR). We may ask you to verify
-your identity before fulfilling a request.
+Some recipients may process personal data outside the EEA, United Kingdom, or
+Switzerland. Where required, we rely on an applicable adequacy decision,
+European Commission Standard Contractual Clauses, the UK International Data
+Transfer Addendum or other lawful transfer mechanism, together with
+supplementary safeguards where appropriate. Contact us for information about
+the safeguard used for a particular transfer.
 
-## 11. Security
+## 7. Retention
 
-We apply industry-standard technical and organisational measures to
-protect personal data, including encryption in transit, access controls
-on backend systems, secret management, and security monitoring. No
-system is ever perfectly secure. We recommend you protect the Apple ID
-or Google account used to sign in and the device you sign in from.
+We retain personal data only for as long as reasonably necessary for the stated
+purpose, then delete or anonymize it. Our intended standard periods are:
 
-If we become aware of a personal-data breach that is likely to result
-in a risk to your rights and freedoms, we will notify the competent
-supervisory authority and, where required, affected users, in the
-timeframes required by law.
+- **Account, profile, settings, gameplay, social graph, organization membership,
+  chat messages and translations, and direct-trade data:** while the account is
+  active, then handled through the deletion process in Section 10. Shared world
+  objects may remain after attribution to your account is removed.
+- **Live socket presence:** normally expires within approximately three minutes
+  after the connection stops refreshing. The account's last-seen timestamp is
+  retained with the account until deletion.
+- **Safety reports, moderation actions, evidence, and appeals:** while a case is
+  active and generally for up to 24 months after closure; longer where needed
+  for repeat-abuse prevention, legal claims, or a legal preservation duty.
+- **Operational logs containing IP address or request metadata:** generally 30
+  to 90 days; longer only for a documented security incident, fraud review, or
+  legal claim.
+- **Product analytics:** according to the configured Mixpanel project retention
+  and for no longer than reasonably needed for product analysis. Before release,
+  the configured period must be recorded in the processor inventory and store
+  disclosures.
+- **Crash and performance telemetry:** generally up to 90 days in identifiable
+  form, subject to the configured Sentry retention period; aggregate statistics
+  may be kept longer.
+- **Push tokens:** until replaced, invalidated, permission is withdrawn, or the
+  account is deleted. Delivery receipts are retained only for operational retry
+  and troubleshooting needs.
+- **Purchase, subscription, refund, reversal, sales, and accounting records:**
+  up to 10 years where required by Czech accounting or VAT law, or longer if a
+  legal hold applies. We minimize or detach account attribution where possible.
+- **Deletion and enforcement audit records:** for the period necessary to prove
+  deletion, prevent circumvention, protect users, resolve disputes, and meet
+  legal obligations. These may retain the former internal account ID and limited
+  identity or transaction context where necessary for the audit purpose.
 
-## 12. Contact
+These periods are maximum defaults, not promises to retain data for the full
+period. A shorter period may apply where the data is no longer needed.
 
-**Account deletion.** The fastest path is in-app:
-**Settings** → **Danger Zone** → **Delete Account**. You can also use
-the public form at `https://ascion.space/account-deletion`. See
-Section 9 for the full deletion process, including the 30-day grace
-period and how residual technical records are handled.
+## 8. Your choices and controls
 
-For other rights, questions about this Policy, or any other
-data-protection matter, email **privacy@ascion.space**.
-Postal mail may be sent to 1101 Capital s.r.o., Lidická 700/19,
-Veveří, 602 00 Brno, Czech Republic. Czech administrative
-communications may also be sent to our Data Box (ID `zi6aisw`). No
-formal DPO is appointed at this stage; the contacts above are the
-single privacy contact.
+You can:
+
+- change supported profile, language, notification, and social settings in the
+  Service;
+- decline or disable push notifications through device settings;
+- choose whether to link Discord and disconnect it through Settings;
+- choose whether to request translation of an individual message;
+- leave organizations or end social relationships through available controls;
+- object to analytics or other legitimate-interest processing by contacting us;
+  and
+- request access, correction, export, restriction, or deletion as described
+  below.
+
+Some processing is necessary to provide the Service. If you object to or ask us
+to delete data required for account operation, we may need to close the account.
+
+## 9. Minimum age
+
+The Service is not offered to anyone under **16**. We record only confirmation
+that the age requirement was met, not date of birth. If we learn that we have
+collected personal data from a child under 16, we will take steps to delete it.
+
+## 10. Account deletion
+
+You can request deletion in-app through **Settings → Danger Zone → Delete
+Account**, through `https://ascion.space/account-deletion`, or by contacting
+**privacy@ascion.space**. The request starts a **30-day grace period** during
+which you may cancel deletion by signing in and selecting **Cancel deletion**.
+
+Deletion may pause if necessary to safely resolve pending purchases, trades,
+market orders, rentals, jobs, shared assets, or organization leadership. For
+example, a sole organization leader must transfer leadership before deletion
+can complete. We use the pause only to prevent corruption of another user's or
+shared game state and will expose or communicate the required action where
+practicable.
+
+After the grace period and required cleanup:
+
+- we delete the account profile, sign-in identifiers, Apple refresh token,
+  Discord link, push tokens, player-specific gameplay records, chat messages and
+  their translations, chat memberships, friendships, organization membership,
+  invitations, membership requests, and notifications;
+- we revoke the Apple sign-in connection where the necessary token is available;
+- shared world assets may remain but are detached from your identity or
+  reassigned to a system account so other users' state remains consistent; and
+- purchase, subscription, sales, enforcement, activity, and deletion-audit
+  records may be reassigned to a deleted-user system record and retained for the
+  periods and purposes in Section 7.
+
+Technical backups may retain deleted data for a limited disaster-recovery cycle,
+during which the data is isolated from ordinary use and removed through normal
+backup rotation. Information already received by another user, such as a push
+notification preview or a lawful copy they made outside the Service, is not
+controlled by our deletion process.
+
+## 11. Your data-protection rights
+
+Subject to applicable law, you may have the right to:
+
+- be informed about processing and obtain **access** to your personal data;
+- receive a **copy** of data we hold about you;
+- **correct** inaccurate or incomplete data;
+- request **erasure**;
+- **restrict** processing in specified circumstances;
+- **object** to processing based on legitimate interests;
+- receive eligible data in a structured, commonly used, machine-readable format
+  and exercise **data portability**;
+- withdraw consent where processing is based on consent, without affecting prior
+  lawful processing; and
+- lodge a complaint with a supervisory authority.
+
+The Czech supervisory authority is the **Úřad pro ochranu osobních údajů
+(ÚOOÚ)** at `https://uoou.gov.cz`. You may also complain to the authority where
+you live or work. We generally respond to verified GDPR requests within one
+month, subject to lawful extensions. Rights may be limited where necessary to
+protect other users' rights, comply with law, or establish, exercise, or defend
+legal claims.
+
+## 12. Security
+
+We use measures including encryption in transit, access controls, secret
+management, account and transaction authorization, server-side purchase
+verification, monitoring, rate limits, and redaction of sensitive telemetry.
+No system can be guaranteed completely secure. Protect the Apple, Google, or
+Discord account and device you use with Ascion.
+
+If a personal-data breach is likely to create a risk to individuals, we will
+notify the competent authority and affected users where required by law.
 
 ## 13. Changes to this Policy
 
-We may update this Policy from time to time. The current version is
-always identified by the **version string** at the top of this
-document. Material changes will be announced in-app. Each accepted
-version is recorded server-side against your account.
+We may update this Policy when the Service, recipients, or law changes. The
+version and status appear at the top and bottom of the document. Material
+changes will be announced in-app and, where required, we will request renewed
+acceptance or consent. The server records the version you accepted.
 
-## 14. Version
+## 14. Contact
 
-- **Version:** `2026-04-24-release-1`
-- **Effective:** `2026-04-24`
-- **Status:** Active.
-- **Acceptance tracking:** The server records the accepted version
-  string on your account. When this version string changes, you will
-  be asked to review and accept the updated Policy on next launch.
+Email **privacy@ascion.space** for privacy rights, account deletion, or questions
+about this Policy. Postal mail may be sent to 1101 Capital s.r.o., Lidická
+700/19, Veveří, 602 00 Brno, Czech Republic. Czech administrative
+communications may be sent to Data Box ID `zi6aisw`.
+
+For social-safety reports or appeals, use the in-app reporting/appeal features
+when available or email **safety@ascion.space**.
+
+## 15. Version
+
+- **Version:** `2026-08-15-draft-1`
+- **Effective:** Pending review and publication.
+- **Status:** Draft; the previously published Privacy Policy remains active.
+- **Acceptance tracking:** Publication requires a new release tag and updated
+  consumer pins. Users whose recorded accepted version differs from the bundled
+  published version will be asked to review and accept it on next launch.

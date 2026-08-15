@@ -344,6 +344,18 @@ Known gaps:
   - Show localized price and period, what is granted, whether the product is
     consumable/restorable/repeatable, auto-renewal, cancellation path, and
     functional Terms and Privacy links at the point of subscription purchase.
+  - Implemented locally 2026-08-15: the Prime purchase screen now uses only the
+    localized store price, identifies the monthly auto-renewable subscription
+    as optional and restorable, explains platform billing/renewal/cancellation,
+    retains Restore Purchases and subscription-management actions, and links
+    directly to the in-app Terms and Privacy readers. The Credits purchase
+    screen now identifies packs as exact-grant, one-time consumables that may be
+    purchased repeatedly but are not restored, includes platform charging copy,
+    and links to Terms and Privacy. Purchase, restore, management, and legal
+    actions expose screen-reader roles, labels, hints, disabled state, and busy
+    state. Focused disclosure tests and mobile TypeScript verification pass.
+    Keep G2.7 unchecked until signed-in screenshots and device accessibility
+    review confirm the final presentation before confirmation.
   - Randomized-reward odds are not applicable to the approved catalog. Re-open
     G0.6 and this requirement before introducing any such product.
   - Done when screenshots and accessibility review confirm disclosure before

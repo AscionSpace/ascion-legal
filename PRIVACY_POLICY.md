@@ -139,9 +139,11 @@ the same message and language can reuse it without another provider request.
 The cached translation is linked to the source message and is deleted when the
 source message is deleted during account erasure.
 
-Before this draft is released, the translation flow must clearly disclose the
-OpenAI transfer at the point of first use and obtain any permission required by
-app-store rules or applicable law.
+When you first request a translation, the Service explains that the selected
+message text and requested language will be sent to OpenAI and asks for your
+permission before sending them. You can withdraw that permission in Settings.
+The server rejects new translation requests unless the current disclosure has
+been accepted.
 
 ### 2.7 Data we do not intentionally collect
 

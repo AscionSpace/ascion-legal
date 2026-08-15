@@ -16,7 +16,7 @@ processing activities, transfer assessment, store disclosure, or legal advice.
 | Profile and preferences | Internal account ID, username, avatar, language, timezone, settings, age confirmation, legal acceptance versions/times | Core service; authorized players see public profile fields | Account life; deleted with account except limited deletion audit context | Implemented |
 | Discord link | Discord ID, username, global name, avatar URL, connection time, role-sync marker | Optional linking, guild membership, Commander/Primer role sync; Discord | Until disconnect or account deletion; Discord-side history follows Discord's policy | Implemented; production QA pending |
 | Chat | Message text/type, sender, thread, sent/edit/delete/read state, membership | World, organization, and direct chat; authorized players | Account life; deleting account deletes authored messages and translations | Implemented |
-| Chat translation | Selected source message, target language, translated text, source hash, provider/model | OpenAI generates on demand with `store:false`; cached in Ascion for authorized readers | Provider may temporarily retain API content under its terms; Ascion cache follows source message | Implemented; first-use third-party-AI disclosure/permission is a release gate |
+| Chat translation | Selected source message, target language, translated text, source hash, provider/model | OpenAI generates on demand with `store:false`; cached in Ascion for authorized readers | Provider may temporarily retain API content under its terms; Ascion cache follows source message | Versioned first-use disclosure, account-level permission and server enforcement implemented locally; DB push, deployment and device QA pending |
 | Friend/social graph | Requests, relationship status, blocking fields, last interaction, counts, private nickname/note | Social connections, direct-chat authorization, player discovery | Account life; relationships deleted with either deleted account | Partially implemented; complete block/unblock UX remains gated |
 | Presence | Short-lived socket/account presence, persistent last-seen timestamp | Online indicators and friend presence | Socket presence expires in about 3 minutes; last-seen follows account | Implemented |
 | Organizations | Name, tag, description, media, visual identity, member roles, invitations/requests and messages | Organization identity, membership, organization chat | Membership/invites/requests deleted with account; shared organization may remain; sole leader must transfer leadership | Implemented; end-to-end QA pending |
@@ -25,7 +25,7 @@ processing activities, transfer assessment, store disclosure, or legal advice.
 | Gameplay | Agents, ships, inventory, balances, progression, missions, world actions, transactions | Provide and secure the game | Account life; player-specific records deleted; shared world objects may remain without personal attribution | Implemented |
 | Purchases/subscriptions | Store, product, transaction/order ID, receipt/token hash, environment, expiry, renewal, refund/reversal/manual-review state | Apple/Google verification, entitlement, accounting, fraud/disputes | Ledger retained up to 10 years where legally required and reparented to deleted-user record on deletion | Implemented; store lifecycle/device QA gated |
 | Notifications | Push token, platform, active state, delivery tickets/receipts, notification content/status | Expo Push, APNs/FCM delivery and troubleshooting | Token until invalid/replaced/permission withdrawal/deletion; receipts only for retry/troubleshooting | Implemented |
-| Mixpanel analytics | Internal account ID, Ascion username, platform, app/build context, named app/gameplay/purchase events and properties; provider-inferred coarse location | EU-hosted product analytics; Mixpanel | Configured project retention must be recorded before release; account deletion/objection workflow must be verified | Implemented; policy previously understated username sharing |
+| Mixpanel analytics | Internal account ID, Ascion username, platform, app/build context, named app/gameplay/purchase events and properties; provider-inferred coarse location | EU-hosted product analytics; Mixpanel | Configured project retention must be recorded before release; account deletion/objection workflow must be verified | Account-level opt-out enforced in mobile and server locally; DB push, deployment, device QA and legal-basis review pending |
 | Crash/performance | Errors, stack traces, routes, device/app context, timings, scrubbed diagnostic fields | Sentry | Draft target up to 90 days identifiable; configured project retention must be verified | Implemented with default PII disabled and custom scrubbers |
 | Server/security logs | IP, user agent, request/time/path metadata, authentication/rate-limit/security signals | Railway/application logs, security and debugging | Generally 30-90 days; longer for documented incidents or legal holds | Implemented; hosting retention configuration needs read-back |
 | Infrastructure | Database rows, Redis presence/cache, media URLs/objects, delivery metadata | Neon, Railway, AWS, Cloudflare and related infrastructure | Follows the relevant data category; backups rotate separately | Implemented; processor/transfer register needs review |
@@ -68,10 +68,10 @@ and sign-in/billing providers.
   Redis, and relevant platform/provider consoles.
 - Confirm processor agreements, SCCs/adequacy coverage, subprocessors, and
   controller-versus-processor roles.
-- Add a clear first-use disclosure and any required permission before sending
-  chat text to OpenAI.
-- Confirm the lawful analytics consent/objection design and provide any consent
-  or opt-out control required by applicable law and app-store rules.
+- Deploy and device-test the versioned first-use OpenAI disclosure, permission,
+  withdrawal control, and server-side enforcement.
+- Confirm the lawful analytics consent/objection design and device-test the
+  account-level opt-out in both mobile and server processing.
 - Reconcile Apple privacy labels and Google Play Data safety answers with this
   inventory and the shipped binary.
 - Complete product review and external Czech/EU privacy counsel review.

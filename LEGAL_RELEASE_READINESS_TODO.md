@@ -419,11 +419,15 @@ Known gaps:
     OpenAI receives selected chat text for on-demand translation with provider
     storage disabled, and the account-deletion worker retains limited purchase,
     sales, subscription, activity, and deletion-audit records under a deleted-user
-    system account. Keep G3.1 unchecked until configured Mixpanel/Sentry retention,
-    processor agreements and transfer safeguards, first-use OpenAI disclosure and
-    permission, the analytics consent/objection design required by applicable law
-    and store rules, Apple privacy labels, Google Play Data safety answers,
-    product review, and counsel review are complete.
+    system account. Versioned first-use OpenAI disclosure and permission,
+    withdrawal in Settings, server-side translation enforcement, and an
+    account-level Mixpanel opt-out enforced by mobile and server are implemented
+    locally. Keep G3.1 unchecked until the account preference schema is applied
+    with `db:push`, these controls are deployed and device-tested, configured
+    Mixpanel/Sentry retention, processor agreements and transfer safeguards, the
+    analytics legal-basis design required by applicable law and store rules,
+    Apple privacy labels, Google Play Data safety answers, product review, and
+    counsel review are complete.
   - Done when the data inventory and policy match field by field.
 
 - [ ] **G3.2 Finalize the Terms draft.**

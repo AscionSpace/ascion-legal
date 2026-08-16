@@ -2,7 +2,7 @@
 
 Status: working implementation plan
 Prepared: 2026-08-11
-Scope: the `2026-08-15-draft-3` Terms release and the product changes needed
+Scope: the `2026-08-16-release-1` legal release and the product changes needed
 to make its social and purchase statements true in production.
 
 This is an implementation checklist, not legal advice. Keep the affected
@@ -122,7 +122,7 @@ Known gaps:
 
 - [x] **G0.3 Decide the moderation policy.**
   - The approved MVP baseline is recorded in
-    `COMMUNITY_CONTENT_POLICY.md` (`2026-08-15-draft-1`).
+    `COMMUNITY_CONTENT_POLICY.md` (`2026-08-16-release-1`).
   - Enforcement progresses from removal/warning through 24-hour, 7-day, and
     30-day social restrictions; 7-day or 30-day account suspensions; and
     permanent termination. Serious safety violations may skip earlier steps.
@@ -466,7 +466,7 @@ Known gaps:
     treatment, retention periods, account-deletion effects, and user rights.
   - Reconcile Mixpanel/Firebase/Sentry payloads with actual code and store privacy
     disclosures.
-  - Drafted `2026-08-15-draft-1` on 2026-08-15 with a checked-in data inventory.
+  - Published as `2026-08-16-release-1` with a checked-in data inventory.
     It now covers chat messages and cached translations, friendships, presence,
     organizations, invitations, direct trades, conditional reporting/moderation
     records, Apple/Google purchases and reversals, Discord linking and role sync,
@@ -503,7 +503,9 @@ Known gaps:
     examples, enforcement range, reporting route, and appeal route.
   - Link it from first social use, chat safety actions, moderation notices, the
     website, and store support metadata where appropriate.
-  - Drafted `2026-08-15-draft-1` from the approved G0.3 baseline. Keep this
+  - Published as `2026-08-16-release-1` from the approved G0.3 baseline,
+    aligned with implemented public illegal-content intake and player safety
+    workflows. Keep this
     gate unchecked until counsel/product review, implementation alignment,
     public website publication, and in-app links are complete.
   - Done when it is versioned and accessible without signing in.
@@ -580,7 +582,7 @@ Known gaps:
 
 ## G5 — publish and enforce the legal release
 
-- [ ] **G5.1 Cut final legal versions.**
+- [x] **G5.1 Cut final legal versions.**
   - Replace draft frontmatter with an approved date-based release version and
     effective date in both Terms and Privacy.
   - Remove the draft notice and update `README.md` status/counsel notes.

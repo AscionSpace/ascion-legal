@@ -1,15 +1,10 @@
 ---
-version: 2026-08-15-draft-1
-status: DRAFT — pending product and counsel review
-effective: (pending)
+version: 2026-08-16-release-1
+status: ACTIVE
+effective: 2026-08-16
 ---
 
 # Community and Content Policy
-
-> **Review draft.** This policy records Ascion's approved MVP moderation,
-> enforcement, and appeal rules. It is not effective until the related safety
-> tools work in production, product and legal review are complete, and the
-> policy is published through Ascion's release-tracked legal process.
 
 ## 1. Purpose and scope
 
@@ -18,9 +13,11 @@ world, organization, and direct chat; usernames and profiles; organizations;
 invitations; and direct-trade messages. This policy applies to content and
 conduct on all of those surfaces.
 
-This policy supplements the Terms of Service. It does not replace applicable
-law or prevent Ascion from acting where necessary to protect players, the
-Service, or third parties.
+This policy supplements the Terms of Service and should be read with the Privacy
+Policy, which explains how reports, evidence, moderation decisions, and appeals
+are processed and retained. It does not replace applicable law or prevent
+Ascion from acting where necessary to protect players, the Service, or third
+parties.
 
 ## 2. Community rules
 
@@ -32,6 +29,8 @@ Do not:
   promote hatred or discrimination;
 - post sexual exploitation material, sexual content involving minors, or
   content that endangers or exploits a child;
+- post pornographic or sexually explicit content, sexual harassment, or
+  non-consensual intimate content;
 - reveal or threaten to reveal another person's private or confidential
   information without permission;
 - impersonate others, deceive players, manipulate trades, commit fraud, or
@@ -42,6 +41,8 @@ Do not:
   descriptions, or invitations;
 - evade a block, content restriction, social restriction, suspension, or ban;
 - post unlawful content or encourage serious unlawful activity; or
+- infringe another person's intellectual-property, privacy, publicity, or
+  other legal rights; or
 - encourage self-harm, credible violence, terrorism, or other conduct that
   creates a serious safety risk.
 
@@ -51,9 +52,12 @@ with it. Even so, players should avoid reposting harmful material unnecessarily.
 
 ## 3. Reports and blocks
 
-Players may report messages, players, organizations, invitations, and direct-
-trade offers using the relevant in-app action when available. Reports and
-appeals may also be sent to **safety@ascion.space**.
+Players may use the in-app Report action for chat messages and player accounts.
+Reports about organizations, invitations, direct-trade offers, or another
+community-rule issue may be sent to **safety@ascion.space**. Appeals may be
+submitted through the in-app Safety Center when the decision is appealable, or
+by email. Content that may be illegal under EU or national law can be reported
+without signing in at `https://ascion.space/report-illegal-content`.
 
 A useful report identifies the content or account, where and approximately when
 the event occurred, the reason for the report, and any relevant context. Ascion
@@ -66,9 +70,13 @@ on the available evidence, context, severity, history, and this policy—not on
 the number of reports alone. Knowingly false, coordinated, or abusive reporting
 may itself result in action.
 
-Players may block abusive users through the available in-app block action.
-Blocking is separate from reporting: blocking limits further interaction, while
-reporting asks Ascion to review conduct or content.
+Players may block another player through the in-app block action. Blocking is
+separate from reporting: it ends the friendship state, prevents direct contact
+between the two accounts through covered social and trade features, removes
+pending invitations between them, and cancels pending direct-trade offers.
+Unblocking does not restore a former friendship, invitation, or trade. Reporting
+asks Ascion to review conduct or content and does not automatically block the
+reported player.
 
 ## 4. How enforcement works
 
@@ -122,9 +130,11 @@ permanent termination through an available in-app appeal action or by emailing
 it should be changed. One appeal is available for each decision; Ascion may
 consider a further request if it contains materially new evidence.
 
-For MVP, the operator monitoring **safety@ascion.space** may also review the
-appeal. The appeal must nevertheless be considered afresh and recorded as a
-separate decision. No decision will be made solely by an automated system.
+The appeal must be considered afresh and recorded as a separate decision. Where
+practicable, it will be reviewed by someone other than the original decision-
+maker. If staffing requires the same operator to review it, that operator must
+reassess the decision on the appeal record rather than merely confirming the
+earlier outcome. No appeal decision will be made solely by an automated system.
 Where an appeal succeeds, Ascion will reverse the restriction and restore
 content or access where reasonably and technically possible.
 
@@ -134,17 +144,25 @@ operational targets, not guaranteed resolution times.
 
 ## 8. Illegal content and emergencies
 
-Reports alleging illegal content will be handled separately from ordinary
+Reports alleging illegal content are handled separately from ordinary
 community-rule reports where applicable law requires different information,
-notices, review, or redress. The final public illegal-content notice route and
-any legally required out-of-court redress information remain subject to legal
-review before this draft is published.
+notices, review, or redress. The public route at
+`https://ascion.space/report-illegal-content` asks the reporter to identify the
+content and its location, explain why it may be illegal, identify the relevant
+country, provide supporting context, and confirm a good-faith belief. A valid
+submission receives a reference code. Ascion may use the reporter's email to
+request information and communicate the outcome where required or appropriate.
 
 If someone faces an immediate threat or believes a crime is occurring, they
 should contact the appropriate local emergency service or law-enforcement
 authority. Ascion may preserve relevant evidence, immediately restrict access,
 or contact competent authorities where legally required or reasonably necessary
 to address an imminent and serious risk.
+
+Ascion has zero tolerance for child sexual abuse and exploitation. We remove
+such content, restrict involved accounts, preserve evidence where lawful, and
+report to competent authorities where required. Google Play child-safety notices
+and other child-safety contacts may be sent to **safety@ascion.space**.
 
 ## 9. Changes and contact
 
@@ -156,7 +174,6 @@ Questions, reports, and appeals may be sent to **safety@ascion.space**.
 
 ## 10. Version
 
-- **Version:** `2026-08-15-draft-1`
-- **Effective:** Pending review and publication.
-- **Status:** Draft — pending product and counsel review.
-
+- **Version:** `2026-08-16-release-1`
+- **Effective:** `2026-08-16`.
+- **Status:** Active.

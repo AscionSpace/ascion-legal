@@ -33,9 +33,9 @@ push a new tag here, (2) update the submodule pointer in each consumer.
 
 | Document                | Version               | Status | Notes                                                |
 | ----------------------- | --------------------- | ------ | ---------------------------------------------------- |
-| `TERMS_OF_SERVICE.md`   | `2026-08-15-draft-3`    | DRAFT   | Records Apple and Google IAP, monthly-only Prime, safe refund/revocation handling, `safety@ascion.space`, chat/UGC moderation, organizations, and trading. Pending product and counsel review; not published. |
-| `PRIVACY_POLICY.md`     | `2026-08-15-draft-1`    | DRAFT   | Covers social/chat/translation, organizations, trading, Discord, purchases, analytics, retention, deletion, and rights. Pending processor/configuration verification, store-disclosure alignment, product review, and counsel review; the last published tag remains active. |
-| `COMMUNITY_CONTENT_POLICY.md` | `2026-08-15-draft-1` | DRAFT | Records the approved MVP rules, enforcement ladder, reporting, blocking, moderation notices, automation boundary, and appeals. Pending implementation alignment, product/counsel review, links, and publication. |
+| `TERMS_OF_SERVICE.md`   | `2026-08-16-release-1` | ACTIVE | Covers Apple and Google IAP, monthly-only Prime, refund/revocation handling, chat/UGC moderation, organizations, and trading. External counsel review remains recommended. |
+| `PRIVACY_POLICY.md`     | `2026-08-16-release-1` | ACTIVE | Covers current social, safety, translation, purchases, analytics, retention, deletion, and rights flows. Processor configuration and store disclosures must remain aligned; external counsel review remains recommended. |
+| `COMMUNITY_CONTENT_POLICY.md` | `2026-08-16-release-1` | ACTIVE | Covers reporting, blocking, enforcement, notices, appeals, public illegal-content intake, and child-safety contact. Production operations must remain aligned; external counsel review remains recommended. |
 | `STORE_SUBMISSION_CHECKLIST.md` | n/a | WORKING | Apple App Store + Google Play launch-readiness checklist based on current official platform guidance. |
 | `LEGAL_RELEASE_READINESS_TODO.md` | n/a | WORKING | Ordered implementation and release checklist for social safety, moderation, IAP reliability, privacy, legal acceptance, QA, and publication. |
 
@@ -94,7 +94,7 @@ Locked decisions (do not re-open without product-level reason):
 9. The IAP clauses — confirm treatment of consumable credits, repeatable
    permanent storage, permanent accommodation entitlements, subscription
    renewal/cancellation, refunds/revocations, and cross-platform access.
-10. Review the `2026-08-15-draft-1` Privacy Policy against the processor
+10. Review the `2026-08-16-release-1` Privacy Policy against the processor
     agreements and configured retention periods, especially OpenAI chat
     translation, Mixpanel username profiles, Discord role synchronization,
     moderation-evidence retention, and the limited records retained after

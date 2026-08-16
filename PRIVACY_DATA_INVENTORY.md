@@ -1,8 +1,8 @@
 # Ascion privacy data inventory
 
-Status: working code-to-policy inventory  
-Prepared: 2026-08-15  
-Policy draft: `2026-08-15-draft-1`
+Status: working code-to-policy inventory
+Prepared: 2026-08-16
+Policy release: `2026-08-16-release-1`
 
 This inventory records the implemented data flows reviewed for the Privacy
 Policy draft. It is not a substitute for a processor register, records of
@@ -25,7 +25,7 @@ processing activities, transfer assessment, store disclosure, or legal advice.
 | Gameplay | Agents, ships, inventory, balances, progression, missions, world actions, transactions | Provide and secure the game | Account life; player-specific records deleted; shared world objects may remain without personal attribution | Implemented |
 | Purchases/subscriptions | Store, product, transaction/order ID, receipt/token hash, environment, expiry, renewal, refund/reversal/manual-review state | Apple/Google verification, entitlement, accounting, fraud/disputes | Ledger retained up to 10 years where legally required and reparented to deleted-user record on deletion | Implemented; store lifecycle/device QA gated |
 | Notifications | Push token, platform, active state, delivery tickets/receipts, notification content/status | Expo Push, APNs/FCM delivery and troubleshooting | Token until invalid/replaced/permission withdrawal/deletion; receipts only for retry/troubleshooting | Implemented |
-| Mixpanel analytics | Internal account ID, Ascion username, platform, app/build context, named app/gameplay/purchase events and properties; provider-inferred coarse location | EU-hosted product analytics; Mixpanel | Configured project retention must be recorded before release; account deletion/objection workflow must be verified | Account-level opt-out enforced in mobile and server locally; DB push, deployment, device QA and legal-basis review pending |
+| Mixpanel analytics | Internal account ID, Ascion username, platform, app/build context, named app/gameplay/purchase events and properties; provider-inferred coarse location | EU-hosted product analytics; Mixpanel | Policy maximum: generally 24 months identifiable; configured project retention must not exceed this; deletion/objection workflow must be verified | Account-level opt-out enforced in mobile and server locally; DB push, deployment, device QA and legal-basis review pending |
 | Crash/performance | Errors, stack traces, routes, device/app context, timings, scrubbed diagnostic fields | Sentry | Draft target up to 90 days identifiable; configured project retention must be verified | Implemented with default PII disabled and custom scrubbers |
 | Server/security logs | IP, user agent, request/time/path metadata, authentication/rate-limit/security signals | Railway/application logs, security and debugging | Generally 30-90 days; longer for documented incidents or legal holds | Implemented; hosting retention configuration needs read-back |
 | Infrastructure | Database rows, Redis presence/cache, media URLs/objects, delivery metadata | Neon, Railway, AWS, Cloudflare and related infrastructure | Follows the relevant data category; backups rotate separately | Implemented; processor/transfer register needs review |

@@ -1,16 +1,10 @@
 ---
-version: 2026-08-15-draft-1
-status: DRAFT — pending product, processor, and counsel review
-effective: (pending)
+version: 2026-08-16-release-1
+status: ACTIVE
+effective: 2026-08-16
 ---
 
 # Privacy Policy
-
-> **Review draft.** This version reflects Ascion's current account, gameplay,
-> social, chat-translation, organization, direct-trading, analytics, Discord,
-> and in-app-purchase features. It is not effective until it has completed
-> product and legal review and is published through Ascion's release-tracked
-> legal process.
 
 This Privacy Policy explains how **1101 Capital s.r.o.** collects, uses,
 shares, retains, and protects personal data when you use the **Ascion** mobile
@@ -75,7 +69,7 @@ authorized users of the relevant social space to see.
 
 ### 2.3 Safety reports, moderation, and appeals
 
-Where reporting, moderation, or appeal features are available, we process the
+When a report is submitted or a moderation decision is made, we process the
 reporter and reported account, the reported message/profile/organization/
 invitation/trade, category, explanation, relevant thread or organization,
 timestamps, status, and a limited evidence snapshot or hash. We also process
@@ -174,7 +168,7 @@ We receive personal data:
 | Create and operate accounts; authenticate users; provide gameplay, social features, organizations, chat, direct trades, purchases, entitlements, and requested translations | Performance of a contract, Art. 6(1)(b) |
 | Display usernames, avatars, presence, messages, organizations, achievements, contributions, and transaction context to the users who are entitled to see them | Performance of a contract, Art. 6(1)(b), and legitimate interests, Art. 6(1)(f) |
 | Prevent fraud, cheating, abuse, account compromise, and service disruption; enforce rules; investigate reports; moderate content; handle appeals | Legitimate interests, Art. 6(1)(f), and legal obligation where applicable, Art. 6(1)(c) |
-| Verify age-gate completion and protect minors | Legal obligation, Art. 6(1)(c), and legitimate interests, Art. 6(1)(f) |
+| Verify age-gate completion and protect minors | Performance of a contract, Art. 6(1)(b), legitimate interests, Art. 6(1)(f), and legal obligation where applicable, Art. 6(1)(c) |
 | Send transactional push notifications | Performance of a contract, Art. 6(1)(b), with device permission requested through the operating system |
 | Measure feature use and improve the Service through product analytics | Legitimate interests, Art. 6(1)(f), subject to your right to object and any consent required by ePrivacy or local law |
 | Diagnose crashes, monitor performance, maintain logs, and secure infrastructure | Legitimate interests, Art. 6(1)(f) |
@@ -258,10 +252,9 @@ purpose, then delete or anonymize it. Our intended standard periods are:
 - **Operational logs containing IP address or request metadata:** generally 30
   to 90 days; longer only for a documented security incident, fraud review, or
   legal claim.
-- **Product analytics:** according to the configured Mixpanel project retention
-  and for no longer than reasonably needed for product analysis. Before release,
-  the configured period must be recorded in the processor inventory and store
-  disclosures.
+- **Product analytics:** generally for up to 24 months in identifiable form,
+  subject to the configured Mixpanel project retention period; aggregate or
+  de-identified statistics may be kept longer.
 - **Crash and performance telemetry:** generally up to 90 days in identifiable
   form, subject to the configured Sentry retention period; aggregate statistics
   may be kept longer.
@@ -288,6 +281,9 @@ You can:
 - decline or disable push notifications through device settings;
 - choose whether to link Discord and disconnect it through Settings;
 - choose whether to request translation of an individual message;
+- withdraw permission for new chat-translation requests through Settings;
+- disable account-linked product analytics through Settings, without losing
+  access to core gameplay or purchased functionality;
 - leave organizations or end social relationships through available controls;
 - object to analytics or other legitimate-interest processing by contacting us;
   and
@@ -385,13 +381,13 @@ about this Policy. Postal mail may be sent to 1101 Capital s.r.o., Lidická
 communications may be sent to Data Box ID `zi6aisw`.
 
 For social-safety reports or appeals, use the in-app reporting/appeal features
-when available or email **safety@ascion.space**.
+or email **safety@ascion.space**. Allegedly illegal content may also be reported
+without signing in at `https://ascion.space/report-illegal-content`.
 
 ## 15. Version
 
-- **Version:** `2026-08-15-draft-1`
-- **Effective:** Pending review and publication.
-- **Status:** Draft; the previously published Privacy Policy remains active.
-- **Acceptance tracking:** Publication requires a new release tag and updated
-  consumer pins. Users whose recorded accepted version differs from the bundled
-  published version will be asked to review and accept it on next launch.
+- **Version:** `2026-08-16-release-1`
+- **Effective:** `2026-08-16`.
+- **Status:** Active.
+- **Acceptance tracking:** Users whose recorded accepted version differs from
+  this version will be asked to review and accept it on next launch.

@@ -1,15 +1,10 @@
 ---
-version: 2026-08-15-draft-3
-status: DRAFT — pending product and counsel review
-effective: (pending)
+version: 2026-08-16-release-1
+status: ACTIVE
+effective: 2026-08-16
 ---
 
 # Terms of Service
-
-> **Review draft.** This version reflects Ascion's current social,
-> player-trading, organization, and in-app-purchase features. It is not
-> effective until it has completed product and legal review and is published
-> through Ascion's release-tracked legal process.
 
 ## 1. Who these terms are between
 
@@ -351,10 +346,9 @@ not affect interpretation.
 
 ## 18. Version
 
-- **Version:** `2026-08-15-draft-3`
-- **Effective:** Pending publication.
-- **Status:** Draft — pending product and counsel review.
+- **Version:** `2026-08-16-release-1`
+- **Effective:** `2026-08-16`.
+- **Status:** Active.
 - **Acceptance tracking:** The server records the accepted version string
-  on your account. If this draft is approved and published with a new
-  release version, you will be asked to review and accept the updated
-  Terms on next launch.
+  on your account. If your recorded version differs from this version, you
+  will be asked to review and accept the updated Terms on next launch.

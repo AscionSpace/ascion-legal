@@ -606,8 +606,11 @@ Known gaps:
     deletion-copy follow-ups `224f5ba` and `e9dd279`), and mobile `daf9412`.
     The mobile update was prepared in an isolated worktree so unrelated local
     gameplay changes were not included.
+  - Corrective follow-up on 2026-08-16: server `88d7824` and mobile `30e2eec`
+    add separately recorded Community Policy acceptance and the missing mobile
+    confirmation/reader flow.
 
-- [x] **G5.4 Deploy in the safe order.**
+- [ ] **G5.4 Deploy in the safe order.**
   - Deploy server-side version validation/enforcement and public legal pages in
     coordination with the client release so no valid client is accidentally
     locked out.
@@ -618,9 +621,13 @@ Known gaps:
     Update group `1ca4985b-a68c-48fb-868d-f9aba5f0dce7` was published to the
     production branch for Android and iOS. Server defaults accept both
     `2026-04-23-release-1` and `2026-08-16-release-1` during the rollout window.
+  - Corrective server deployment `234a45cd-4614-4d95-889d-35d37b0c6e99`
+    reached `SUCCESS` after the additive Account schema was synchronized. The
+    corrected mobile source is pushed, but its production OTA and read-back are
+    still required before this gate can be closed again.
 
 - [ ] **G5.5 Verify re-acceptance and audit records.**
-  - Confirm an existing account is prompted for both changed documents, can
+  - Confirm an existing account is prompted for all three documents, can
     read them, cannot bypass acceptance, and records the exact released
     versions and timestamps.
   - Confirm refusal still allows support and account deletion.

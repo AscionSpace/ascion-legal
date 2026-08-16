@@ -588,9 +588,11 @@ Known gaps:
   - Remove the draft notice and update `README.md` status/counsel notes.
   - Run formatting, frontmatter parsing, link, and diff checks.
 
-- [ ] **G5.2 Commit, push, and tag `ascion-legal`.**
+- [x] **G5.2 Commit, push, and tag `ascion-legal`.**
   - Use one reviewed legal release commit and matching immutable tag.
   - Do not move an existing legal tag.
+  - Published commit `56513e3` and immutable annotated tag
+    `v2026-08-16-release-1` on 2026-08-16.
 
 - [ ] **G5.3 Update every consumer deliberately.**
   - Update the legal submodule pointer in `ascion-server`.

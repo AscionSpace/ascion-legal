@@ -594,7 +594,7 @@ Known gaps:
   - Published commit `56513e3` and immutable annotated tag
     `v2026-08-16-release-1` on 2026-08-16.
 
-- [ ] **G5.3 Update every consumer deliberately.**
+- [x] **G5.3 Update every consumer deliberately.**
   - Update the legal submodule pointer in `ascion-server`.
   - Update the legal submodule pointer in `ascion-website` and verify public
     `/terms` and `/privacy` pages.
@@ -602,12 +602,22 @@ Known gaps:
     `src/content/legal.generated.ts`, and verify both documents render.
   - Commit and push each nested repository separately without including
     unrelated work.
+  - Completed on 2026-08-16: server `de735ca`, website `fa89f73` (with
+    deletion-copy follow-ups `224f5ba` and `e9dd279`), and mobile `daf9412`.
+    The mobile update was prepared in an isolated worktree so unrelated local
+    gameplay changes were not included.
 
-- [ ] **G5.4 Deploy in the safe order.**
+- [x] **G5.4 Deploy in the safe order.**
   - Deploy server-side version validation/enforcement and public legal pages in
     coordination with the client release so no valid client is accidentally
     locked out.
   - Publish the mobile build/update only after server and web read-back pass.
+  - Completed on 2026-08-16: Railway deployment
+    `18a6378b-1684-475b-92f7-18fe8416c8d5` reached `SUCCESS`; the public Terms,
+    Privacy, and Community Policy pages returned the released version; then EAS
+    Update group `1ca4985b-a68c-48fb-868d-f9aba5f0dce7` was published to the
+    production branch for Android and iOS. Server defaults accept both
+    `2026-04-23-release-1` and `2026-08-16-release-1` during the rollout window.
 
 - [ ] **G5.5 Verify re-acceptance and audit records.**
   - Confirm an existing account is prompted for both changed documents, can
